@@ -1,0 +1,1 @@
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.zsh

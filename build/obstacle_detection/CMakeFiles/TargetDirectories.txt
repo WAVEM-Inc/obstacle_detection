@@ -1,0 +1,10 @@
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/uninstall.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/obstacle_detection_uninstall.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/obstacle_detection_node.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/test.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/edit_cache.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/rebuild_cache.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/list_install_components.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/install.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/install/local.dir
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/install/strip.dir

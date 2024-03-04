@@ -1,0 +1,4 @@
+int8	obstacle_area_status
+float64	obstacle_distance
+int8	obstacle_direction
+float64	obstacle_length

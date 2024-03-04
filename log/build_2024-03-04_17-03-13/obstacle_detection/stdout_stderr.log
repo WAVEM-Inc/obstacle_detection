@@ -1,0 +1,45 @@
+[ 66%] [32mBuilding CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o[0m
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::scan_callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)[m[K’:
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:32:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+   32 |         int [01;35m[Kdetect_area[m[K[detect_arealen][detect_arealen]={0,};
+      |             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:32:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:35:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   35 |         for(lp=1;[01;35m[Klp<scan->ranges.size()[m[K;lp++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:14:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance_val[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   14 |         int [01;35m[Kdistance_val[m[K,detect_val, detect_flag;
+      |             [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:14:26:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kdetect_val[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   14 |         int distance_val,[01;35m[Kdetect_val[m[K, detect_flag;
+      |                          [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:29:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knum_ranges[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   29 |         int [01;35m[Knum_ranges[m[K = scan->ranges.size();
+      |             [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:15:9:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdistance_x[m[K’ is used uninitialized [[01;35m[K-Wuninitialized[m[K]
+   15 |         [01;35m[Kif[m[K(distance_x < 0)
+      |         [01;35m[K^~[m[K
+[01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:20:29:[m[K [01;35m[Kwarning: [m[K‘[01m[Klidar_range[m[K’ may be used uninitialized [[01;35m[K-Wmaybe-uninitialized[m[K]
+   20 |                 [01;35m[Karea_size_y2=lidar_range - 0.0[m[K;
+      |                 [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable obstacle_detection_node[0m
+[100%] Built target obstacle_detection_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/obstacle_detection/obstacle_detection_node
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/package_run_dependencies/obstacle_detection
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/parent_prefix_path/obstacle_detection
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.sh
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.dsv
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.sh
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.dsv
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.bash
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.sh
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.zsh
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.dsv
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.dsv
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/packages/obstacle_detection
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig.cmake
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig-version.cmake
+-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.xml

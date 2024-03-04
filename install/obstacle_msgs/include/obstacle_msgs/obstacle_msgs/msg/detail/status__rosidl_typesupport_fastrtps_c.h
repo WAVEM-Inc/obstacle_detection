@@ -1,0 +1,1 @@
+/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_c/obstacle_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
