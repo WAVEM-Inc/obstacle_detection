@@ -1,1 +1,0 @@
-/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Status.msg

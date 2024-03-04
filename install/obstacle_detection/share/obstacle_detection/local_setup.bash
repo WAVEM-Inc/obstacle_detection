@@ -1,1 +1,0 @@
-/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.bash

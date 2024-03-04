@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/obstacle_detection_node" "TARGETS" "obstacle_detection_node" "DESTINATION" "lib/obstacle_detection")
