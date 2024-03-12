@@ -1,0 +1,347 @@
+[0.000000] (-) TimerEvent: {}
+[0.000160] (obstacle_msgs) JobQueued: {'identifier': 'obstacle_msgs', 'dependencies': OrderedDict()}
+[0.000192] (obstacle_detection) JobQueued: {'identifier': 'obstacle_detection', 'dependencies': OrderedDict([('obstacle_msgs', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs')])}
+[0.000214] (obstacle_msgs) JobStarted: {'identifier': 'obstacle_msgs'}
+[0.036127] (obstacle_msgs) JobProgress: {'identifier': 'obstacle_msgs', 'progress': 'cmake'}
+[0.036512] (obstacle_msgs) JobProgress: {'identifier': 'obstacle_msgs', 'progress': 'build'}
+[0.036966] (obstacle_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs', '--', '-j8', '-l8'], 'cwd': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('IGN_IP', '127.0.0.1'), ('USER', 'nuc-bt'), ('SSH_CLIENT', '192.168.0.100 58894 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nuc-bt'), ('OLDPWD', '/home/nuc-bt/ros2_ws/src/drive'), ('SSH_TTY', '/dev/pts/5'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc-bt'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2548'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.100 58894 192.168.0.234 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.077852] (obstacle_msgs) StdoutLine: {'line': b'[  2%] Built target obstacle_msgs__cpp\n'}
+[0.078230] (obstacle_msgs) StdoutLine: {'line': b'[ 12%] Built target obstacle_msgs__rosidl_generator_c\n'}
+[0.092198] (obstacle_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_obstacle_msgs\n'}
+[0.100306] (-) TimerEvent: {}
+[0.100524] (obstacle_msgs) StdoutLine: {'line': b'[ 33%] Built target obstacle_msgs__rosidl_typesupport_c\n'}
+[0.100658] (obstacle_msgs) StdoutLine: {'line': b'[ 33%] Built target obstacle_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.100776] (obstacle_msgs) StdoutLine: {'line': b'[ 43%] Built target obstacle_msgs__rosidl_typesupport_cpp\n'}
+[0.101958] (obstacle_msgs) StdoutLine: {'line': b'[ 53%] Built target obstacle_msgs__rosidl_typesupport_introspection_c\n'}
+[0.102851] (obstacle_msgs) StdoutLine: {'line': b'[ 64%] Built target obstacle_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.102945] (obstacle_msgs) StdoutLine: {'line': b'[ 74%] Built target obstacle_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.122894] (obstacle_msgs) StdoutLine: {'line': b'[ 74%] Built target obstacle_msgs\n'}
+[0.139967] (obstacle_msgs) StdoutLine: {'line': b'[ 76%] Built target obstacle_msgs__py\n'}
+[0.158415] (obstacle_msgs) StdoutLine: {'line': b'[ 84%] Built target obstacle_msgs__rosidl_generator_py\n'}
+[0.174191] (obstacle_msgs) StdoutLine: {'line': b'[100%] Built target obstacle_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.174543] (obstacle_msgs) StdoutLine: {'line': b'[100%] Built target obstacle_msgs__rosidl_typesupport_c__pyext\n'}
+[0.174755] (obstacle_msgs) StdoutLine: {'line': b'[100%] Built target obstacle_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.200392] (-) TimerEvent: {}
+[0.283972] (obstacle_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.284529] (obstacle_msgs) StdoutLine: {'line': b'writing obstacle_msgs.egg-info/PKG-INFO\n'}
+[0.284693] (obstacle_msgs) StdoutLine: {'line': b'writing dependency_links to obstacle_msgs.egg-info/dependency_links.txt\n'}
+[0.284801] (obstacle_msgs) StdoutLine: {'line': b'writing top-level names to obstacle_msgs.egg-info/top_level.txt\n'}
+[0.286821] (obstacle_msgs) StdoutLine: {'line': b"reading manifest file 'obstacle_msgs.egg-info/SOURCES.txt'\n"}
+[0.287199] (obstacle_msgs) StdoutLine: {'line': b"writing manifest file 'obstacle_msgs.egg-info/SOURCES.txt'\n"}
+[0.300528] (-) TimerEvent: {}
+[0.310865] (obstacle_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_obstacle_msgs_egg\n'}
+[0.320012] (obstacle_msgs) CommandEnded: {'returncode': 0}
+[0.384409] (obstacle_msgs) JobProgress: {'identifier': 'obstacle_msgs', 'progress': 'install'}
+[0.392929] (obstacle_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs'], 'cwd': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('IGN_IP', '127.0.0.1'), ('USER', 'nuc-bt'), ('SSH_CLIENT', '192.168.0.100 58894 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nuc-bt'), ('OLDPWD', '/home/nuc-bt/ros2_ws/src/drive'), ('SSH_TTY', '/dev/pts/5'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc-bt'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2548'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.100 58894 192.168.0.234 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.399476] (obstacle_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.400027] (obstacle_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.400223] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/ament_index/resource_index/rosidl_interfaces/obstacle_msgs\n'}
+[0.400565] (-) TimerEvent: {}
+[0.406412] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/area.h\n'}
+[0.406653] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__functions.h\n'}
+[0.406711] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__struct.h\n'}
+[0.406756] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__type_support.h\n'}
+[0.406843] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__functions.h\n'}
+[0.406886] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__struct.h\n'}
+[0.406936] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__type_support.h\n'}
+[0.407016] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.407091] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/status.h\n'}
+[0.407388] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/library_path.sh\n'}
+[0.407635] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/library_path.dsv\n'}
+[0.407781] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__rosidl_typesupport_fastrtps_c.h\n'}
+[0.407889] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h\n'}
+[0.409663] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.409798] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/area.hpp\n'}
+[0.409881] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__builder.hpp\n'}
+[0.410006] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__struct.hpp\n'}
+[0.410124] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__traits.hpp\n'}
+[0.410193] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__builder.hpp\n'}
+[0.410259] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__struct.hpp\n'}
+[0.410325] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__traits.hpp\n'}
+[0.410391] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/status.hpp\n'}
+[0.410480] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.410530] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.410585] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.410654] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__rosidl_typesupport_introspection_c.h\n'}
+[0.410749] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h\n'}
+[0.410838] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.411137] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/area__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.411256] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/include/obstacle_msgs/obstacle_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.411423] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/pythonpath.sh\n'}
+[0.411565] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/pythonpath.dsv\n'}
+[0.411808] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.411914] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.412041] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.412153] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.412540] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/__init__.py\n'}
+[0.412647] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/_obstacle_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.412768] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/_obstacle_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.412875] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/_obstacle_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.412989] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/libobstacle_msgs__rosidl_generator_py.so\n'}
+[0.413109] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg/__init__.py\n'}
+[0.413274] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg/_area.py\n'}
+[0.413437] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg/_area_s.c\n'}
+[0.413552] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg/_status.py\n'}
+[0.413665] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg/_status_s.c\n'}
+[0.413778] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.413888] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.413996] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.414228] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.414427] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.414626] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/obstacle_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.414775] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/msg/Status.idl\n'}
+[0.414921] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/msg/Area.idl\n'}
+[0.415067] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/msg/Status.msg\n'}
+[0.415260] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/msg/Area.msg\n'}
+[0.415375] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/ament_index/resource_index/package_run_dependencies/obstacle_msgs\n'}
+[0.415520] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/ament_index/resource_index/parent_prefix_path/obstacle_msgs\n'}
+[0.415656] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/ament_prefix_path.sh\n'}
+[0.415789] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/ament_prefix_path.dsv\n'}
+[0.415989] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/path.sh\n'}
+[0.416270] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/environment/path.dsv\n'}
+[0.416362] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/local_setup.bash\n'}
+[0.416460] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/local_setup.sh\n'}
+[0.416614] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/local_setup.zsh\n'}
+[0.416881] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/local_setup.dsv\n'}
+[0.416948] (obstacle_msgs) StdoutLine: {'line': b'-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.dsv\n'}
+[0.423348] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/ament_index/resource_index/packages/obstacle_msgs\n'}
+[0.423580] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.423670] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.423757] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.423876] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.424008] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.424148] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.424275] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.424411] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgsConfig.cmake\n'}
+[0.424529] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgsConfig-version.cmake\n'}
+[0.424657] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.xml\n'}
+[0.424824] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_c.so\n'}
+[0.425005] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.425176] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.425346] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.425506] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_c.so\n'}
+[0.425666] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.425830] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_cpp.so\n'}
+[0.452530] (obstacle_msgs) StdoutLine: {'line': b"Listing '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs'...\n"}
+[0.452664] (obstacle_msgs) StdoutLine: {'line': b"Listing '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages/obstacle_msgs/msg'...\n"}
+[0.455469] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_py.so\n'}
+[0.455725] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_generator_cExport.cmake\n'}
+[0.455859] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.455916] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.455967] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.456076] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.456125] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.456173] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.456221] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.456269] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.456317] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.456362] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.456459] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.456499] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.456533] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.456568] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/obstacle_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.456601] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.456636] (obstacle_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/cmake/export_obstacle_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.457876] (obstacle_msgs) CommandEnded: {'returncode': 0}
+[0.500887] (-) TimerEvent: {}
+[0.601236] (-) TimerEvent: {}
+[0.616149] (obstacle_msgs) JobEnded: {'identifier': 'obstacle_msgs', 'rc': 0}
+[0.616661] (obstacle_detection) JobStarted: {'identifier': 'obstacle_detection'}
+[0.660597] (obstacle_detection) JobProgress: {'identifier': 'obstacle_detection', 'progress': 'cmake'}
+[0.661309] (obstacle_detection) JobProgress: {'identifier': 'obstacle_detection', 'progress': 'build'}
+[0.662473] (obstacle_detection) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection', '--', '-j8', '-l8'], 'cwd': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('IGN_IP', '127.0.0.1'), ('USER', 'nuc-bt'), ('SSH_CLIENT', '192.168.0.100 58894 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nuc-bt'), ('OLDPWD', '/home/nuc-bt/ros2_ws/src/drive'), ('SSH_TTY', '/dev/pts/5'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc-bt'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2548'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.100 58894 192.168.0.234 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble')]), 'shell': False}
+[0.696031] (obstacle_detection) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target obstacle_detection_node\x1b[0m\n'}
+[0.703143] (-) TimerEvent: {}
+[0.713183] (obstacle_detection) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o\x1b[0m\n'}
+[0.803245] (-) TimerEvent: {}
+[0.903492] (-) TimerEvent: {}
+[1.003759] (-) TimerEvent: {}
+[1.104006] (-) TimerEvent: {}
+[1.204295] (-) TimerEvent: {}
+[1.304659] (-) TimerEvent: {}
+[1.404960] (-) TimerEvent: {}
+[1.505206] (-) TimerEvent: {}
+[1.605495] (-) TimerEvent: {}
+[1.705759] (-) TimerEvent: {}
+[1.806041] (-) TimerEvent: {}
+[1.906341] (-) TimerEvent: {}
+[2.006620] (-) TimerEvent: {}
+[2.106966] (-) TimerEvent: {}
+[2.207237] (-) TimerEvent: {}
+[2.307493] (-) TimerEvent: {}
+[2.407779] (-) TimerEvent: {}
+[2.508143] (-) TimerEvent: {}
+[2.608438] (-) TimerEvent: {}
+[2.649259] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObsDetection::scan_callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.649446] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids variable length array \xe2\x80\x98\x1b[01m\x1b[Kdetect_area\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wvla\x1b[m\x1b[K]\n'}
+[2.649498] (obstacle_detection) StderrLine: {'line': b'   79 |         int \x1b[01;35m\x1b[Kdetect_area\x1b[m\x1b[K[detect_arealen][detect_arealen]={0,};\n'}
+[2.649540] (obstacle_detection) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.649579] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids variable length array \xe2\x80\x98\x1b[01m\x1b[Kdetect_area\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wvla\x1b[m\x1b[K]\n'}
+[2.649619] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:82:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<float>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[2.649750] (obstacle_detection) StderrLine: {'line': b'   82 |         for(lp=1;\x1b[01;35m\x1b[Klp<scan->ranges.size()\x1b[m\x1b[K;lp++)\n'}
+[2.649799] (obstacle_detection) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.649844] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:107:42:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99, but argument 2 has type \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[2.649890] (obstacle_detection) StderrLine: {'line': b'  107 |                                 printf("\x1b[01;35m\x1b[K%f\x1b[m\x1b[K,%f,%f,%f\\n",\x1b[32m\x1b[Kdetect_arealen/2\x1b[m\x1b[K,robot_detect_x, lp_x,lp_y);\n'}
+[2.649936] (obstacle_detection) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~^\x1b[m\x1b[K             \x1b[32m\x1b[K~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.649981] (obstacle_detection) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K|\x1b[m\x1b[K                           \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.650024] (obstacle_detection) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[Kdouble\x1b[m\x1b[K                      \x1b[32m\x1b[Kunsigned int\x1b[m\x1b[K\n'}
+[2.650068] (obstacle_detection) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[K%d\x1b[m\x1b[K\n'}
+[2.650111] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:107:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99, but argument 3 has type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[2.650156] (obstacle_detection) StderrLine: {'line': b'  107 |                                 printf("%f,\x1b[01;35m\x1b[K%f\x1b[m\x1b[K,%f,%f\\n",detect_arealen/2,\x1b[32m\x1b[Krobot_detect_x\x1b[m\x1b[K, lp_x,lp_y);\n'}
+[2.650200] (obstacle_detection) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K~^\x1b[m\x1b[K                           \x1b[32m\x1b[K~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.650244] (obstacle_detection) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K|\x1b[m\x1b[K                           \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.650288] (obstacle_detection) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[Kdouble\x1b[m\x1b[K                      \x1b[32m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.650331] (obstacle_detection) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[K%d\x1b[m\x1b[K\n'}
+[2.650398] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:107:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99, but argument 4 has type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[2.650448] (obstacle_detection) StderrLine: {'line': b'  107 |                                 printf("%f,%f,\x1b[01;35m\x1b[K%f\x1b[m\x1b[K,%f\\n",detect_arealen/2,robot_detect_x, \x1b[32m\x1b[Klp_x\x1b[m\x1b[K,lp_y);\n'}
+[2.650503] (obstacle_detection) StderrLine: {'line': b'      |                                               \x1b[01;35m\x1b[K~^\x1b[m\x1b[K                                        \x1b[32m\x1b[K~~~~\x1b[m\x1b[K\n'}
+[2.650539] (obstacle_detection) StderrLine: {'line': b'      |                                                \x1b[01;35m\x1b[K|\x1b[m\x1b[K                                        \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.650573] (obstacle_detection) StderrLine: {'line': b'      |                                                \x1b[01;35m\x1b[Kdouble\x1b[m\x1b[K                                   \x1b[32m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.650610] (obstacle_detection) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[K%d\x1b[m\x1b[K\n'}
+[2.650644] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:107:51:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wformat=\x1b[m\x1b[K]\n'}
+[2.650680] (obstacle_detection) StderrLine: {'line': b'  107 |                                 printf("%f,%f,%f,\x1b[01;35m\x1b[K%f\x1b[m\x1b[K\\n",detect_arealen/2,robot_detect_x, lp_x,\x1b[32m\x1b[Klp_y\x1b[m\x1b[K);\n'}
+[2.650714] (obstacle_detection) StderrLine: {'line': b'      |                                                  \x1b[01;35m\x1b[K~^\x1b[m\x1b[K                                          \x1b[32m\x1b[K~~~~\x1b[m\x1b[K\n'}
+[2.650747] (obstacle_detection) StderrLine: {'line': b'      |                                                   \x1b[01;35m\x1b[K|\x1b[m\x1b[K                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.650779] (obstacle_detection) StderrLine: {'line': b'      |                                                   \x1b[01;35m\x1b[Kdouble\x1b[m\x1b[K                                     \x1b[32m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.650812] (obstacle_detection) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%d\x1b[m\x1b[K\n'}
+[2.650844] (obstacle_detection) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:76:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Knum_ranges\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.650878] (obstacle_detection) StderrLine: {'line': b'   76 |         int \x1b[01;35m\x1b[Knum_ranges\x1b[m\x1b[K = scan->ranges.size();\n'}
+[2.650912] (obstacle_detection) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.708564] (-) TimerEvent: {}
+[2.808917] (-) TimerEvent: {}
+[2.909238] (-) TimerEvent: {}
+[3.009558] (-) TimerEvent: {}
+[3.109874] (-) TimerEvent: {}
+[3.210136] (-) TimerEvent: {}
+[3.310397] (-) TimerEvent: {}
+[3.410712] (-) TimerEvent: {}
+[3.511024] (-) TimerEvent: {}
+[3.611367] (-) TimerEvent: {}
+[3.711693] (-) TimerEvent: {}
+[3.812054] (-) TimerEvent: {}
+[3.912350] (-) TimerEvent: {}
+[4.012657] (-) TimerEvent: {}
+[4.112958] (-) TimerEvent: {}
+[4.213300] (-) TimerEvent: {}
+[4.313640] (-) TimerEvent: {}
+[4.413971] (-) TimerEvent: {}
+[4.514292] (-) TimerEvent: {}
+[4.614621] (-) TimerEvent: {}
+[4.714985] (-) TimerEvent: {}
+[4.815331] (-) TimerEvent: {}
+[4.915691] (-) TimerEvent: {}
+[5.016150] (-) TimerEvent: {}
+[5.116392] (-) TimerEvent: {}
+[5.216644] (-) TimerEvent: {}
+[5.316886] (-) TimerEvent: {}
+[5.417135] (-) TimerEvent: {}
+[5.517400] (-) TimerEvent: {}
+[5.617720] (-) TimerEvent: {}
+[5.717977] (-) TimerEvent: {}
+[5.818298] (-) TimerEvent: {}
+[5.918569] (-) TimerEvent: {}
+[6.018859] (-) TimerEvent: {}
+[6.119154] (-) TimerEvent: {}
+[6.219416] (-) TimerEvent: {}
+[6.319732] (-) TimerEvent: {}
+[6.420509] (-) TimerEvent: {}
+[6.520827] (-) TimerEvent: {}
+[6.621112] (-) TimerEvent: {}
+[6.721369] (-) TimerEvent: {}
+[6.821642] (-) TimerEvent: {}
+[6.921924] (-) TimerEvent: {}
+[7.022180] (-) TimerEvent: {}
+[7.122429] (-) TimerEvent: {}
+[7.222734] (-) TimerEvent: {}
+[7.323157] (-) TimerEvent: {}
+[7.423513] (-) TimerEvent: {}
+[7.523895] (-) TimerEvent: {}
+[7.624219] (-) TimerEvent: {}
+[7.724476] (-) TimerEvent: {}
+[7.824712] (-) TimerEvent: {}
+[7.926150] (-) TimerEvent: {}
+[8.026505] (-) TimerEvent: {}
+[8.126743] (-) TimerEvent: {}
+[8.226987] (-) TimerEvent: {}
+[8.327252] (-) TimerEvent: {}
+[8.427490] (-) TimerEvent: {}
+[8.527753] (-) TimerEvent: {}
+[8.628096] (-) TimerEvent: {}
+[8.728523] (-) TimerEvent: {}
+[8.828755] (-) TimerEvent: {}
+[8.929003] (-) TimerEvent: {}
+[9.029306] (-) TimerEvent: {}
+[9.129582] (-) TimerEvent: {}
+[9.229815] (-) TimerEvent: {}
+[9.330057] (-) TimerEvent: {}
+[9.430332] (-) TimerEvent: {}
+[9.530650] (-) TimerEvent: {}
+[9.630899] (-) TimerEvent: {}
+[9.731168] (-) TimerEvent: {}
+[9.831418] (-) TimerEvent: {}
+[9.931660] (-) TimerEvent: {}
+[10.031935] (-) TimerEvent: {}
+[10.133396] (-) TimerEvent: {}
+[10.233786] (-) TimerEvent: {}
+[10.334049] (-) TimerEvent: {}
+[10.434339] (-) TimerEvent: {}
+[10.534581] (-) TimerEvent: {}
+[10.634812] (-) TimerEvent: {}
+[10.735093] (-) TimerEvent: {}
+[10.835369] (-) TimerEvent: {}
+[10.935722] (-) TimerEvent: {}
+[11.035952] (-) TimerEvent: {}
+[11.136181] (-) TimerEvent: {}
+[11.236418] (-) TimerEvent: {}
+[11.336656] (-) TimerEvent: {}
+[11.439270] (-) TimerEvent: {}
+[11.539551] (-) TimerEvent: {}
+[11.639865] (-) TimerEvent: {}
+[11.740158] (-) TimerEvent: {}
+[11.840389] (-) TimerEvent: {}
+[11.940625] (-) TimerEvent: {}
+[12.040904] (-) TimerEvent: {}
+[12.141281] (-) TimerEvent: {}
+[12.241587] (-) TimerEvent: {}
+[12.342577] (-) TimerEvent: {}
+[12.442972] (-) TimerEvent: {}
+[12.543254] (-) TimerEvent: {}
+[12.643561] (-) TimerEvent: {}
+[12.743830] (-) TimerEvent: {}
+[12.844077] (-) TimerEvent: {}
+[12.944331] (-) TimerEvent: {}
+[13.020201] (obstacle_detection) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable obstacle_detection_node\x1b[0m\n'}
+[13.044472] (-) TimerEvent: {}
+[13.144958] (-) TimerEvent: {}
+[13.245224] (-) TimerEvent: {}
+[13.345532] (-) TimerEvent: {}
+[13.445841] (-) TimerEvent: {}
+[13.546086] (-) TimerEvent: {}
+[13.646330] (-) TimerEvent: {}
+[13.748100] (-) TimerEvent: {}
+[13.785992] (obstacle_detection) StdoutLine: {'line': b'[100%] Built target obstacle_detection_node\n'}
+[13.796142] (obstacle_detection) CommandEnded: {'returncode': 0}
+[13.817540] (obstacle_detection) JobProgress: {'identifier': 'obstacle_detection', 'progress': 'install'}
+[13.817841] (obstacle_detection) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection'], 'cwd': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('IGN_IP', '127.0.0.1'), ('USER', 'nuc-bt'), ('SSH_CLIENT', '192.168.0.100 58894 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/nuc-bt'), ('OLDPWD', '/home/nuc-bt/ros2_ws/src/drive'), ('SSH_TTY', '/dev/pts/5'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc-bt'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '2548'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:13.0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('PWD', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.0.100 58894 192.168.0.234 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble')]), 'shell': False}
+[13.822849] (obstacle_detection) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.823145] (obstacle_detection) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[13.823514] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/obstacle_detection/obstacle_detection_node\n'}
+[13.823636] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/package_run_dependencies/obstacle_detection\n'}
+[13.823737] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/parent_prefix_path/obstacle_detection\n'}
+[13.823827] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.sh\n'}
+[13.823949] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.dsv\n'}
+[13.824067] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.sh\n'}
+[13.824158] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.dsv\n'}
+[13.824246] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.bash\n'}
+[13.824339] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.sh\n'}
+[13.824422] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.zsh\n'}
+[13.824503] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.dsv\n'}
+[13.824593] (obstacle_detection) StdoutLine: {'line': b'-- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.dsv\n'}
+[13.831411] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/packages/obstacle_detection\n'}
+[13.831605] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig.cmake\n'}
+[13.831670] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig-version.cmake\n'}
+[13.831728] (obstacle_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.xml\n'}
+[13.832689] (obstacle_detection) CommandEnded: {'returncode': 0}
+[13.848253] (-) TimerEvent: {}
+[13.932073] (obstacle_detection) JobEnded: {'identifier': 'obstacle_detection', 'rc': 0}
+[13.932700] (-) EventReactorShutdown: {}

@@ -1,0 +1,47 @@
+[0.046s] Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8
+[0.079s] [35m[1mConsolidate compiler generated dependencies of target obstacle_detection_node[0m
+[0.092s] [ 33%] [32mBuilding CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o[0m
+[2.018s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::scan_callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)[m[K’:
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+[2.019s]    79 |         int [01;35m[Kdetect_area[m[K[detect_arealen][detect_arealen]={0,};
+[2.019s]       |             [01;35m[K^~~~~~~~~~~[m[K
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:82:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.019s]    82 |         for(lp=1;[01;35m[Klp<scan->ranges.size()[m[K;lp++)
+[2.019s]       |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:114:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.019s]   114 |         printf([01;35m[K"\e[1;1H\e[2J"[m[K);
+[2.019s]       |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:114:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:115:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.019s]   115 |         for(lp_y=0;[01;35m[Klp_y < detect_arealen[m[K;lp_y++)
+[2.019s]       |                    [01;35m[K~~~~~^~~~~~~~~~~~~~~~[m[K
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:117:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.019s]   117 |                 for(lp_x=0;[01;35m[Klp_x < detect_arealen[m[K;lp_x++)
+[2.019s]       |                            [01;35m[K~~~~~^~~~~~~~~~~~~~~~[m[K
+[2.019s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:76:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knum_ranges[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.019s]    76 |         int [01;35m[Knum_ranges[m[K = scan->ranges.size();
+[2.019s]       |             [01;35m[K^~~~~~~~~~[m[K
+[12.356s] [ 66%] [32m[1mLinking CXX executable obstacle_detection_node[0m
+[13.145s] [100%] Built target obstacle_detection_node
+[13.155s] Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection' returned '0': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8
+[13.176s] Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+[13.181s] -- Install configuration: ""
+[13.182s] -- Execute custom install script
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/obstacle_detection/obstacle_detection_node
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/package_run_dependencies/obstacle_detection
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/parent_prefix_path/obstacle_detection
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.sh
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/ament_prefix_path.dsv
+[13.182s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.sh
+[13.183s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/environment/path.dsv
+[13.183s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.bash
+[13.183s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.sh
+[13.183s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.zsh
+[13.183s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/local_setup.dsv
+[13.183s] -- Symlinking: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.dsv
+[13.189s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/ament_index/resource_index/packages/obstacle_detection
+[13.189s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig.cmake
+[13.190s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/cmake/obstacle_detectionConfig-version.cmake
+[13.190s] -- Up-to-date symlink: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.xml
+[13.191s] Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection' returned '0': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection

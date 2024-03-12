@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from obstacle_msgs/msg/Area.msg
+// generated code does not contain a copyright notice
+
+
+module obstacle_msgs {
+  module msg {
+    struct Area {
+      int8 obstacle_area_status;
+
+      double obstacle_distance;
+
+      int8 obstacle_direction;
+
+      double obstacle_length;
+
+      double obstacle_lat_1;
+
+      double obstacle_long_1;
+
+      double obstacle_lat_2;
+
+      double obstacle_long_2;
+    };
+  };
+};

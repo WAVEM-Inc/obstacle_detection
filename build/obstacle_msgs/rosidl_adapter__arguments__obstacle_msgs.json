@@ -1,0 +1,7 @@
+{
+  "package_name": "obstacle_msgs",
+  "non_idl_tuples": [
+    "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs:msg/Status.msg",
+    "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs:msg/Area.msg"
+  ]
+}

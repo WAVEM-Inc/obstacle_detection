@@ -1,0 +1,32 @@
+[0.047s] Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8
+[0.078s] [35m[1mConsolidate compiler generated dependencies of target obstacle_detection_node[0m
+[0.093s] [ 33%] [32mBuilding CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o[0m
+[2.048s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::scan_callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)[m[K’:
+[2.048s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+[2.048s]    79 |         int [01;35m[Kdetect_area[m[K[detect_arealen][detect_arealen]={0,};
+[2.048s]       |             [01;35m[K^~~~~~~~~~~[m[K
+[2.048s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:79:13:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kdetect_area[m[K’ [[01;35m[K-Wvla[m[K]
+[2.048s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:82:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.048s]    82 |         for(lp=1;[01;35m[Klp<scan->ranges.size()[m[K;lp++)
+[2.048s]       |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[2.055s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:118:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetect_ared[m[K’ was not declared in this scope; did you mean ‘[01m[Kdetect_area[m[K’?
+[2.055s]   118 |         [01;31m[Kdetect_ared[m[K[detect_arealen/2][detect_arealen/2]=5;
+[2.055s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.055s]       |         [32m[Kdetect_area[m[K
+[2.056s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:119:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.056s]   119 |         printf([01;35m[K"\e[1;1H\e[2J"[m[K);
+[2.056s]       |                [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.056s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:119:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.056s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:120:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.056s]   120 |         for(lp_y=0;[01;35m[Klp_y < detect_arealen[m[K;lp_y++)
+[2.056s]       |                    [01;35m[K~~~~~^~~~~~~~~~~~~~~~[m[K
+[2.056s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:122:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kunsigned int[m[K’ [[01;35m[K-Wsign-compare[m[K]
+[2.056s]   122 |                 for(lp_x=0;[01;35m[Klp_x < detect_arealen[m[K;lp_x++)
+[2.056s]       |                            [01;35m[K~~~~~^~~~~~~~~~~~~~~~[m[K
+[2.056s] [01m[K/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp:76:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knum_ranges[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.056s]    76 |         int [01;35m[Knum_ranges[m[K = scan->ranges.size();
+[2.056s]       |             [01;35m[K^~~~~~~~~~[m[K
+[6.478s] gmake[2]: *** [CMakeFiles/obstacle_detection_node.dir/build.make:90: CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o] Error 1
+[6.478s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/obstacle_detection_node.dir/all] Error 2
+[6.478s] gmake: *** [Makefile:146: all] Error 2
+[6.480s] Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection' returned '2': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8

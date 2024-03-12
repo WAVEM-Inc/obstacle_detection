@@ -1,0 +1,187 @@
+[1.071s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[1.072s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f0b35466e60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f0b365d7f40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f0b365d7f40>>)
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.120s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.121s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.121s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.135s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extensions ['ignore', 'ignore_ament_install']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extension 'ignore'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extension 'ignore_ament_install'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extensions ['colcon_pkg']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extension 'colcon_pkg'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extensions ['colcon_meta']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extension 'colcon_meta'
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extensions ['ros']
+[1.136s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_detection) by extension 'ros'
+[1.139s] DEBUG:colcon.colcon_core.package_identification:Package 'obstacle_detection' with type 'ros.ament_cmake' and name 'obstacle_detection'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extension 'ignore'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extension 'ignore_ament_install'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extensions ['colcon_pkg']
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extension 'colcon_pkg'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extensions ['colcon_meta']
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extension 'colcon_meta'
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extensions ['ros']
+[1.140s] Level 1:colcon.colcon_core.package_identification:_identify(obstacle_msgs) by extension 'ros'
+[1.141s] DEBUG:colcon.colcon_core.package_identification:Package 'obstacle_msgs' with type 'ros.ament_cmake' and name 'obstacle_msgs'
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.236s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.258s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 314 installed packages in /opt/ros/humble
+[1.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_args' from command line to 'None'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_target' from command line to 'None'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.328s] Level 5:colcon.colcon_core.verb:set package 'obstacle_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.328s] DEBUG:colcon.colcon_core.verb:Building package 'obstacle_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs', 'merge_install': False, 'path': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs', 'symlink_install': True, 'test_result_base': None}
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_args' from command line to 'None'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_target' from command line to 'None'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_clean_cache' from command line to 'False'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_clean_first' from command line to 'False'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'cmake_force_configure' from command line to 'False'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'ament_cmake_args' from command line to 'None'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'catkin_cmake_args' from command line to 'None'
+[1.337s] Level 5:colcon.colcon_core.verb:set package 'obstacle_detection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.337s] DEBUG:colcon.colcon_core.verb:Building package 'obstacle_detection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection', 'merge_install': False, 'path': '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection', 'symlink_install': True, 'test_result_base': None}
+[1.347s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.359s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.359s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs' with build type 'ament_cmake'
+[1.362s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs'
+[1.372s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.372s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.372s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs -- -j8 -l8
+[1.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs -- -j8 -l8
+[1.888s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs
+[1.949s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_msgs)
+[1.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs
+[1.966s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs' for CMake module files
+[1.967s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs' for CMake config files
+[1.967s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_msgs', 'cmake_prefix_path')
+[1.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.ps1'
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.dsv'
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.sh'
+[1.980s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib'
+[1.980s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_msgs', 'ld_library_path_lib')
+[1.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.ps1'
+[1.989s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.dsv'
+[1.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.sh'
+[1.990s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/bin'
+[1.990s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/pkgconfig/obstacle_msgs.pc'
+[1.990s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/python3.10/site-packages'
+[1.990s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/bin'
+[2.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.ps1'
+[2.004s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.dsv'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.sh'
+[2.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.bash'
+[2.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.zsh'
+[2.006s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/colcon-core/packages/obstacle_msgs)
+[2.103s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_msgs)
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs' for CMake module files
+[2.116s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs' for CMake config files
+[2.117s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_msgs', 'cmake_prefix_path')
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.ps1'
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.dsv'
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/cmake_prefix_path.sh'
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib'
+[2.132s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_msgs', 'ld_library_path_lib')
+[2.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.ps1'
+[2.146s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.dsv'
+[2.146s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/hook/ld_library_path_lib.sh'
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/bin'
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/pkgconfig/obstacle_msgs.pc'
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/python3.10/site-packages'
+[2.147s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/bin'
+[2.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.ps1'
+[2.162s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.dsv'
+[2.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.sh'
+[2.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.bash'
+[2.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/obstacle_msgs/package.zsh'
+[2.164s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/share/colcon-core/packages/obstacle_msgs)
+[2.164s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection' with build type 'ament_cmake'
+[2.164s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection'
+[2.179s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.179s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8
+[16.279s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection' returned '0': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection -- -j8 -l8
+[16.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+[16.321s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_detection)
+[16.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection' returned '0': AMENT_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+[16.334s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection' for CMake module files
+[16.334s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection' for CMake config files
+[16.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_detection', 'cmake_prefix_path')
+[16.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.ps1'
+[16.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.dsv'
+[16.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.sh'
+[16.345s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib'
+[16.345s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/bin'
+[16.345s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/pkgconfig/obstacle_detection.pc'
+[16.345s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/python3.10/site-packages'
+[16.345s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/bin'
+[16.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.ps1'
+[16.354s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.dsv'
+[16.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.sh'
+[16.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.bash'
+[16.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.zsh'
+[16.354s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/colcon-core/packages/obstacle_detection)
+[16.384s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_detection)
+[16.395s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection' for CMake module files
+[16.396s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection' for CMake config files
+[16.396s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_detection', 'cmake_prefix_path')
+[16.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.ps1'
+[16.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.dsv'
+[16.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/hook/cmake_prefix_path.sh'
+[16.405s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib'
+[16.405s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/bin'
+[16.405s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/pkgconfig/obstacle_detection.pc'
+[16.405s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/lib/python3.10/site-packages'
+[16.406s] Level 1:colcon.colcon_core.environment:checking '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/bin'
+[16.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.ps1'
+[16.415s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.dsv'
+[16.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.sh'
+[16.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.bash'
+[16.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/obstacle_detection/package.zsh'
+[16.416s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/share/colcon-core/packages/obstacle_detection)
+[16.416s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[16.416s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[16.416s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[16.416s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[16.432s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[16.433s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[16.433s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'

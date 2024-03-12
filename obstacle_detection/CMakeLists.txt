@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(obstacle_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 include_directories(
@@ -24,6 +25,7 @@ set(source_set
 set(dependencies 
   rclcpp
   sensor_msgs
+  nav_msgs
   obstacle_msgs
 )
 
