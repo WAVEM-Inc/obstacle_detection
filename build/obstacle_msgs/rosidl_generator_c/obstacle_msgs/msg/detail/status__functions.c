@@ -11,6 +11,10 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `obstacle_id`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 obstacle_msgs__msg__Status__init(obstacle_msgs__msg__Status * msg)
 {
@@ -20,6 +24,11 @@ obstacle_msgs__msg__Status__init(obstacle_msgs__msg__Status * msg)
   // obstacle_status
   // obstacle_value
   // obstacle_distance
+  // obstacle_id
+  if (!rosidl_runtime_c__String__init(&msg->obstacle_id)) {
+    obstacle_msgs__msg__Status__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -32,6 +41,8 @@ obstacle_msgs__msg__Status__fini(obstacle_msgs__msg__Status * msg)
   // obstacle_status
   // obstacle_value
   // obstacle_distance
+  // obstacle_id
+  rosidl_runtime_c__String__fini(&msg->obstacle_id);
 }
 
 bool
@@ -52,6 +63,12 @@ obstacle_msgs__msg__Status__are_equal(const obstacle_msgs__msg__Status * lhs, co
   if (lhs->obstacle_distance != rhs->obstacle_distance) {
     return false;
   }
+  // obstacle_id
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->obstacle_id), &(rhs->obstacle_id)))
+  {
+    return false;
+  }
   return true;
 }
 
@@ -69,6 +86,12 @@ obstacle_msgs__msg__Status__copy(
   output->obstacle_value = input->obstacle_value;
   // obstacle_distance
   output->obstacle_distance = input->obstacle_distance;
+  // obstacle_id
+  if (!rosidl_runtime_c__String__copy(
+      &(input->obstacle_id), &(output->obstacle_id)))
+  {
+    return false;
+  }
   return true;
 }
 

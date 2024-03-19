@@ -12,6 +12,10 @@
 #include "obstacle_msgs/msg/detail/status__struct.h"
 
 
+// Include directives for member types
+// Member `obstacle_id`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,7 +35,7 @@ void obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_fini
   obstacle_msgs__msg__Status__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_message_member_array[4] = {
   {
     "obstacle_status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT8,  // type
@@ -82,13 +86,30 @@ static rosidl_typesupport_introspection_c__MessageMember obstacle_msgs__msg__Sta
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "obstacle_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(obstacle_msgs__msg__Status, obstacle_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_message_members = {
   "obstacle_msgs__msg",  // message namespace
   "Status",  // message name
-  3,  // number of fields
+  4,  // number of fields
   sizeof(obstacle_msgs__msg__Status),
   obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_message_member_array,  // message members
   obstacle_msgs__msg__Status__rosidl_typesupport_introspection_c__Status_init_function,  // function to initialize message memory (memory has to be allocated)

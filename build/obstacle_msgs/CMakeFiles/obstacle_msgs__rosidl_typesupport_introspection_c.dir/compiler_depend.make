@@ -127,7 +127,10 @@ CMakeFiles/obstacle_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/obstacle_msgs/msg/detail/status__struct.h
+  rosidl_generator_c/obstacle_msgs/msg/detail/status__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 
 rosidl_typesupport_introspection_c/obstacle_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h:
@@ -143,6 +146,8 @@ rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h:
 /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/identifier.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
 rosidl_generator_c/obstacle_msgs/msg/detail/status__functions.h:
 
@@ -167,6 +172,8 @@ rosidl_generator_c/obstacle_msgs/msg/detail/status__struct.h:
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 rosidl_typesupport_introspection_c/obstacle_msgs/msg/detail/area__type_support.c:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
@@ -253,6 +260,8 @@ rosidl_generator_c/obstacle_msgs/msg/detail/area__functions.h:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

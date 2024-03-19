@@ -210,6 +210,30 @@ obstacle_detection_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/build
 .PHONY : obstacle_detection_node/fast
 
+src/calc_distance.o: src/calc_distance.cpp.o
+.PHONY : src/calc_distance.o
+
+# target to build an object file
+src/calc_distance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o
+.PHONY : src/calc_distance.cpp.o
+
+src/calc_distance.i: src/calc_distance.cpp.i
+.PHONY : src/calc_distance.i
+
+# target to preprocess a source file
+src/calc_distance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i
+.PHONY : src/calc_distance.cpp.i
+
+src/calc_distance.s: src/calc_distance.cpp.s
+.PHONY : src/calc_distance.s
+
+# target to generate assembly for a file
+src/calc_distance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s
+.PHONY : src/calc_distance.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -258,6 +282,30 @@ src/obstacle_detection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s
 .PHONY : src/obstacle_detection.cpp.s
 
+src/quaternion/quaternion.o: src/quaternion/quaternion.cpp.o
+.PHONY : src/quaternion/quaternion.o
+
+# target to build an object file
+src/quaternion/quaternion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o
+.PHONY : src/quaternion/quaternion.cpp.o
+
+src/quaternion/quaternion.i: src/quaternion/quaternion.cpp.i
+.PHONY : src/quaternion/quaternion.i
+
+# target to preprocess a source file
+src/quaternion/quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i
+.PHONY : src/quaternion/quaternion.cpp.i
+
+src/quaternion/quaternion.s: src/quaternion/quaternion.cpp.s
+.PHONY : src/quaternion/quaternion.s
+
+# target to generate assembly for a file
+src/quaternion/quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_detection_node.dir/build.make CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s
+.PHONY : src/quaternion/quaternion.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,12 +322,18 @@ help:
 	@echo "... obstacle_detection_uninstall"
 	@echo "... uninstall"
 	@echo "... obstacle_detection_node"
+	@echo "... src/calc_distance.o"
+	@echo "... src/calc_distance.i"
+	@echo "... src/calc_distance.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/obstacle_detection.o"
 	@echo "... src/obstacle_detection.i"
 	@echo "... src/obstacle_detection.s"
+	@echo "... src/quaternion/quaternion.o"
+	@echo "... src/quaternion/quaternion.i"
+	@echo "... src/quaternion/quaternion.s"
 .PHONY : help
 
 

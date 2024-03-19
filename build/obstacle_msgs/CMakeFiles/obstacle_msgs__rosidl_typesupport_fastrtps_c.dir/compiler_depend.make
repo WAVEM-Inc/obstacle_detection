@@ -449,10 +449,16 @@ CMakeFiles/obstacle_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/status__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/status__functions.h \
   /usr/include/c++/11/stdlib.h \
-  rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h
+  rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_typesupport_fastrtps_c/obstacle_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h:
 

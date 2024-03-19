@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // obstacle_id
+#include "rosidl_runtime_c/string_functions.h"  // obstacle_id
 
 // forward declare type support functions
 
@@ -64,6 +66,20 @@ static bool _Status__cdr_serialize(
     cdr << ros_message->obstacle_distance;
   }
 
+  // Field name: obstacle_id
+  {
+    const rosidl_runtime_c__String * str = &ros_message->obstacle_id;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   return true;
 }
 
@@ -91,6 +107,22 @@ static bool _Status__cdr_deserialize(
   // Field name: obstacle_distance
   {
     cdr >> ros_message->obstacle_distance;
+  }
+
+  // Field name: obstacle_id
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->obstacle_id.data) {
+      rosidl_runtime_c__String__init(&ros_message->obstacle_id);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->obstacle_id,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'obstacle_id'\n");
+      return false;
+    }
   }
 
   return true;
@@ -128,6 +160,10 @@ size_t get_serialized_size_obstacle_msgs__msg__Status(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name obstacle_id
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->obstacle_id.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -179,6 +215,18 @@ size_t max_serialized_size_obstacle_msgs__msg__Status(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
+  // member: obstacle_id
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -188,7 +236,7 @@ size_t max_serialized_size_obstacle_msgs__msg__Status(
     using DataType = obstacle_msgs__msg__Status;
     is_plain =
       (
-      offsetof(DataType, obstacle_distance) +
+      offsetof(DataType, obstacle_id) +
       last_member_size
       ) == ret_val;
   }

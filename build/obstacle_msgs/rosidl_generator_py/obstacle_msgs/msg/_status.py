@@ -60,18 +60,21 @@ class Status(metaclass=Metaclass_Status):
         '_obstacle_status',
         '_obstacle_value',
         '_obstacle_distance',
+        '_obstacle_id',
     ]
 
     _fields_and_field_types = {
         'obstacle_status': 'int8',
         'obstacle_value': 'boolean',
         'obstacle_distance': 'double',
+        'obstacle_id': 'string',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int8'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -81,6 +84,7 @@ class Status(metaclass=Metaclass_Status):
         self.obstacle_status = kwargs.get('obstacle_status', int())
         self.obstacle_value = kwargs.get('obstacle_value', bool())
         self.obstacle_distance = kwargs.get('obstacle_distance', float())
+        self.obstacle_id = kwargs.get('obstacle_id', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -116,6 +120,8 @@ class Status(metaclass=Metaclass_Status):
         if self.obstacle_value != other.obstacle_value:
             return False
         if self.obstacle_distance != other.obstacle_distance:
+            return False
+        if self.obstacle_id != other.obstacle_id:
             return False
         return True
 
@@ -166,3 +172,16 @@ class Status(metaclass=Metaclass_Status):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'obstacle_distance' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._obstacle_distance = value
+
+    @builtins.property
+    def obstacle_id(self):
+        """Message field 'obstacle_id'."""
+        return self._obstacle_id
+
+    @obstacle_id.setter
+    def obstacle_id(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'obstacle_id' field must be of type 'str'"
+        self._obstacle_id = value

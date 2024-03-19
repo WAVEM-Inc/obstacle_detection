@@ -245,6 +245,8 @@ CMakeFiles/obstacle_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_genera
   rosidl_generator_c/obstacle_msgs/msg/detail/status__type_support.h \
   rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/status__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/status__functions.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/area__type_support.h \
   rosidl_generator_c/obstacle_msgs/msg/detail/area__struct.h \
@@ -256,6 +258,8 @@ rosidl_generator_c/obstacle_msgs/msg/detail/area__functions.h:
 rosidl_generator_c/obstacle_msgs/msg/detail/area__struct.h:
 
 rosidl_generator_c/obstacle_msgs/msg/detail/area__type_support.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -386,6 +390,8 @@ rosidl_generator_c/obstacle_msgs/msg/rosidl_generator_c__visibility_control.h:
 /usr/include/python3.10/fileobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 

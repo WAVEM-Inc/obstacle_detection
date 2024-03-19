@@ -647,4 +647,8 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
- /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/geo_trans.hpp \
+ /usr/include/c++/11/math.h \
+ /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/calc_distance.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/quaternion/quaternion.hpp

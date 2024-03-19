@@ -11,6 +11,8 @@ module obstacle_msgs {
       boolean obstacle_value;
 
       double obstacle_distance;
+
+      string obstacle_id;
     };
   };
 };

@@ -97,16 +97,48 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp -o CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s
 
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp
+
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp > CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i
+
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s
+
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
+
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp > CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i
+
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s
+
 # Object files for target obstacle_detection_node
 obstacle_detection_node_OBJECTS = \
 "CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o" \
-"CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o"
+"CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o" \
+"CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o" \
+"CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o"
 
 # External object files for target obstacle_detection_node
 obstacle_detection_node_EXTERNAL_OBJECTS =
 
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o
+obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o
+obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/build.make
 obstacle_detection_node: /opt/ros/humble/lib/librclcpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
@@ -203,7 +235,7 @@ obstacle_detection_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 obstacle_detection_node: /opt/ros/humble/lib/librcutils.so
 obstacle_detection_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable obstacle_detection_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable obstacle_detection_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obstacle_detection_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

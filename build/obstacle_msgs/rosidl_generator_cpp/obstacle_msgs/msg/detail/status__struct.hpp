@@ -41,18 +41,20 @@ struct Status_
       this->obstacle_status = 0;
       this->obstacle_value = false;
       this->obstacle_distance = 0.0;
+      this->obstacle_id = "";
     }
   }
 
   explicit Status_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : obstacle_id(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->obstacle_status = 0;
       this->obstacle_value = false;
       this->obstacle_distance = 0.0;
+      this->obstacle_id = "";
     }
   }
 
@@ -66,6 +68,9 @@ struct Status_
   using _obstacle_distance_type =
     double;
   _obstacle_distance_type obstacle_distance;
+  using _obstacle_id_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _obstacle_id_type obstacle_id;
 
   // setters for named parameter idiom
   Type & set__obstacle_status(
@@ -84,6 +89,12 @@ struct Status_
     const double & _arg)
   {
     this->obstacle_distance = _arg;
+    return *this;
+  }
+  Type & set__obstacle_id(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->obstacle_id = _arg;
     return *this;
   }
 
@@ -136,6 +147,9 @@ struct Status_
       return false;
     }
     if (this->obstacle_distance != other.obstacle_distance) {
+      return false;
+    }
+    if (this->obstacle_id != other.obstacle_id) {
       return false;
     }
     return true;

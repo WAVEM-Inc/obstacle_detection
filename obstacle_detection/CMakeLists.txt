@@ -20,6 +20,8 @@ include_directories(
 set(source_set
   src/main.cpp 
   src/obstacle_detection.cpp
+  src/calc_distance.cpp
+  src/quaternion/quaternion.cpp
 )
 
 set(dependencies 

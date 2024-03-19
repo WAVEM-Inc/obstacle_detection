@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_Status_obstacle_id
+{
+public:
+  explicit Init_Status_obstacle_id(::obstacle_msgs::msg::Status & msg)
+  : msg_(msg)
+  {}
+  ::obstacle_msgs::msg::Status obstacle_id(::obstacle_msgs::msg::Status::_obstacle_id_type arg)
+  {
+    msg_.obstacle_id = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::obstacle_msgs::msg::Status msg_;
+};
+
 class Init_Status_obstacle_distance
 {
 public:
   explicit Init_Status_obstacle_distance(::obstacle_msgs::msg::Status & msg)
   : msg_(msg)
   {}
-  ::obstacle_msgs::msg::Status obstacle_distance(::obstacle_msgs::msg::Status::_obstacle_distance_type arg)
+  Init_Status_obstacle_id obstacle_distance(::obstacle_msgs::msg::Status::_obstacle_distance_type arg)
   {
     msg_.obstacle_distance = std::move(arg);
-    return std::move(msg_);
+    return Init_Status_obstacle_id(msg_);
   }
 
 private:
