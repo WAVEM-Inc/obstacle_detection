@@ -20,6 +20,8 @@
 #include "distance/calc_distance.hpp"
 #include <unistd.h>
 #include "quaternion/quaternion.hpp"
+#include <list>
+#include <boost/geometry.hpp>
 using GpsMSG = sensor_msgs::msg::NavSatFix;
 using LidarMSG = sensor_msgs::msg::LaserScan;
 using AreaMSG = obstacle_msgs::msg::Area;
@@ -39,19 +41,21 @@ class ObsDetection : public rclcpp::Node{
         void gps_callback(const std::shared_ptr<GpsMSG> gps);
 	void area_callback(const std::shared_ptr<AreaMSG> area);
 	void odom_callback(const std::shared_ptr<OdomMSG> odom);
-	float area_x1, area_x2, area_y1, area_y2,area_x3,area_y3,area_x4,area_y4;
+	bool area_check(double point_x, double point_y, double *area);
+	double area_x1, area_x2, area_y1, area_y2,area_x3,area_y3,area_x4,area_y4;
+	double obs_area[8];
 	int obstacle_direction;
-	float obstacle_distance, obstacle_length;
-	float area_lat_1, area_long_1, area_lat_2,area_long_2;
-	float obs_dist;
+	double obstacle_distance, obstacle_length;
+	double area_lat_1, area_long_1, area_lat_2,area_long_2;
+	double obs_dist;
 	int area_status;
 	bool detect_val;
 	//odom callback
-	float odom_vel_x=9;
-	float robot_angle;
+	double odom_vel_x=9;
+	double  robot_angle;
 
 	//gps callback
-	float robot_lat,robot_long;
+	double robot_lat,robot_long;
     public :
         ObsDetection();
 	

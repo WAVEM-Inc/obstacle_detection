@@ -27,6 +27,53 @@ void ObsDetection::gps_callback(const std::shared_ptr<GpsMSG> gps)
 	robot_long=gps->longitude;
 
 }
+/*
+   public static boolean isInside(GeoPoint B, List<GeoPoint> p) {
+   int crosses = 0;
+   int n = p.size();
+
+   for (int i = 0; i < n; i++) 
+   {
+   int j = (i + 1) % n;
+
+   if ((p.get(i).getLongitude() > B.getLongitude()) != (p.get(j).getLongitude() > B.getLongitude())) 
+   {
+   double atX = 
+   (p.get(j).getLatitude() - p.get(i).getLatitude()) 
+ * (B.getLongitude() - p.get(i).getLongitude()) 
+ / (p.get(j).getLongitude() - p.get(i).getLongitude()) 
+ + p.get(i).getLatitude();
+
+ if (B.getLatitude() < atX)
+ crosses++;
+ }
+ }
+
+ return crosses % 2 > 0;
+ }
+ */
+bool ObsDetection::area_check(double point_x, double point_y, double *check_area)
+{
+	int num_crosses=0;
+	int area_num=4;
+	
+	for( int lp=0;lp < area_num;lp++)
+	{
+		int lp_y = (lp+1)%area_num;
+		if ((check_area[lp*2+1] > point_y) != (check_area[lp_y*2+1] > point_y)) 
+		{
+			double atX=(check_area[lp_y*2] - check_area[lp*2]) 
+				* (point_y - check_area[lp*2+1])
+				/ (check_area[lp_y*2+1] - check_area[lp*2+1])
+				+ check_area[lp*2];
+			if( point_x < atX )
+			{
+				num_crosses++;
+			}
+		}
+	}
+	return num_crosses % 2 > 0;
+}
 void ObsDetection::area_callback(const std::shared_ptr<AreaMSG> area)
 {
 	area_status=area->obstacle_area_status;
@@ -49,13 +96,18 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	int robot_detect_x,robot_detect_y;
 	int lp,lp_x,lp_y;
 
+	memset(obs_area,0,sizeof(obs_area));
 	StatusMSG status;
 	////tmp value
 	//
-	float node_lat, node_long, node_offset, node_x, node_y,area_start_x, area_start_y;
-	float area_width_l,area_width_r, area_height;
-	float route_angle;
-
+	double node_lat, node_long, node_offset, node_x, node_y,area_start_x, area_start_y;
+	double area_width_l,area_width_r, area_height;
+	double route_angle;
+	
+	if(fabs(odom_vel_x >= 0.1))
+	{
+		area_status=0;
+	}
 	switch(area_status)
 	{
 		case 1:
@@ -89,6 +141,14 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			area_y3=area_start_y+area_width_r*sin(route_angle-90*M_PI/180);
 			area_x4=area_x3+area_height*cos(route_angle);
 			area_y4=area_y3+area_height*sin(route_angle);
+			obs_area[0] =area_x1;
+			obs_area[1] =area_y1;
+			obs_area[2] =area_x2;
+			obs_area[3] =area_y2;
+			obs_area[4] =area_x3;
+			obs_area[5] =area_y3;
+			obs_area[6] =area_x4;
+			obs_area[7] =area_y4;
 			break;	
 		default:
 			robot_angle=0;
@@ -104,14 +164,22 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 				area_y1=0;
 				area_y2=OBS_MOVE_DIST;
 			}
+			obs_area[0] =area_x1;
+			obs_area[1] =-area_y1;
+			obs_area[2] =area_x2;
+			obs_area[3] =-area_y1;
+			obs_area[4] =area_x2;
+			obs_area[5] =area_y2;
+			obs_area[6] =area_x1;
+			obs_area[7] =area_y2;
 			break;	
 	}
 	int num_ranges = scan->ranges.size();
 
-	unsigned int detect_arealen = (float)DETECT_SIZE*(float)DETECT_RES*2;
+	int detect_arealen = (double)DETECT_SIZE*(double)DETECT_RES*2;
 	int detect_area[detect_arealen][detect_arealen]={0,};
 	memset(detect_area,0,sizeof(detect_area));
-	float occ_x,occ_y;
+	double occ_x,occ_y;
 	for(lp=1;lp<num_ranges;lp++)
 	{
 		if((!std::isnan(scan->ranges[lp])) && (scan->ranges[lp] > 0.019 && ((scan->ranges[lp]-scan->ranges[lp-1]) < SCAN_FILTER_DIST )))
@@ -126,21 +194,32 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	}
 
 	detect_val=0;
-	robot_detect_x=(DETECT_SIZE + (float)(area_x1))*DETECT_RES;
-	robot_detect_y=(DETECT_SIZE + (float)(area_y1))*DETECT_RES;
-	obs_dist=DETECT_SIZE;
-	for(lp_y=0;lp_y < DETECT_RES*(area_y2-area_y1);lp_y++)
+	obs_dist=DETECT_SIZE*2;
+	for(lp_y=0;lp_y < detect_arealen;lp_y++)
 	{
-		for(lp_x=0;lp_x < DETECT_RES*(area_x2-area_x1);lp_x++)
+		for(lp_x=0;lp_x < detect_arealen;lp_x++)
 		{
-			if(detect_area[robot_detect_x+lp_x][robot_detect_y+lp_y] == 1)
+			if(detect_area[lp_x][lp_y] > 0)
 			{
-				detect_area[robot_detect_x+lp_x][robot_detect_y+lp_y] = 2;
-				detect_val=1;
-				if(obs_dist > sqrt(pow(detect_arealen/2-(robot_detect_x+lp_x),2) + pow(detect_arealen/2-(robot_detect_y+lp_y),2))/DETECT_RES)
+				if(area_check((double)(lp_x-detect_arealen/2)/DETECT_RES ,(double)(detect_arealen/2-lp_y)/DETECT_RES,obs_area ) )
 				{
-					//obs_dist = sqrt(pow(detect_arealen/2-(robot_detect_x+lp_x),2) + pow(detect_arealen/2-(robot_detect_y+lp_y),2))/DETECT_RES;
-					obs_dist = (detect_arealen/2-(robot_detect_y+lp_y))/DETECT_RES;
+					detect_area[lp_x][lp_y] = 2;
+					detect_val=1;
+					if(area_status >= 1)
+					{
+						if(obs_dist > sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES)
+						{
+							obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
+						}
+
+					}
+					else
+					{
+						if(obs_dist >  fabs((detect_arealen/2-lp_y)/DETECT_RES))
+						{
+							obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES);
+						}
+					}
 				}
 			}
 		}
@@ -149,21 +228,19 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	pub_status_->publish(status);
-
-	detect_area[detect_arealen/2][detect_arealen/2]=5;
 	/*
-	   printf("\e[1;1H\e[2J");
-	   for(lp_y=0;lp_y < detect_arealen;lp_y++)
-	   {
-	   for(lp_x=0;lp_x < detect_arealen;lp_x++)
-	   {
-	   printf("%d",detect_area[lp_x][lp_y]);
-	   }
-	   printf("\n");
-	   }
-	   printf("\n\n\n");
-	   */
-
+	detect_area[detect_arealen/2][detect_arealen/2]=5;
+	printf("\e[1;1H\e[2J");
+	for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	{
+		for(lp_x=0;lp_x < detect_arealen;lp_x++)
+		{
+			printf("%d",detect_area[lp_x][lp_y]);
+		}
+		printf("\n");
+	}
+	printf("\n\n\n");
+	*/
 }
 
 
