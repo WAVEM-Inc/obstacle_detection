@@ -37,15 +37,13 @@ class ObsDetection : public rclcpp::Node{
 		rclcpp::Subscription<OdomMSG>::SharedPtr sub_odom_;
 		rclcpp::Subscription<GpsMSG>::SharedPtr sub_gps_;
 		rclcpp::Subscription<LidarMSG>::SharedPtr sub_scan_;
-		rclcpp::Subscription<AreaMSG>::SharedPtr sub_area_;
 		rclcpp::Subscription<DriveMSG>::SharedPtr sub_drive_;
 		Quaternion qua_;
 		void scan_callback(const std::shared_ptr<LidarMSG> scan);
 		void gps_callback(const std::shared_ptr<GpsMSG> gps);
-		void area_callback(const std::shared_ptr<AreaMSG> area);
 		void odom_callback(const std::shared_ptr<OdomMSG> odom);
 
-		void drivestate_callback(const std::shared_ptr<DriveMSG> drive);
+		void drive_callback(const std::shared_ptr<DriveMSG> drive);
 		bool area_check(double point_x, double point_y, double *area);
 		double area_x1, area_x2, area_y1, area_y2,area_x3,area_y3,area_x4,area_y4;
 		double obs_area[8];

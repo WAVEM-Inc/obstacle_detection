@@ -2,20 +2,18 @@
 
 ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	sub_scan_ = this->create_subscription<LidarMSG>("/scan", 1, std::bind(&ObsDetection::scan_callback ,this ,std::placeholders::_1));
-	sub_area_ = this->create_subscription<AreaMSG>("/drive/obstacle/area", 1, std::bind(&ObsDetection::area_callback ,this ,std::placeholders::_1));
 	sub_gps_ = this->create_subscription<GpsMSG>("/sensor/ublox/fix", 1, std::bind(&ObsDetection::gps_callback ,this ,std::placeholders::_1));
 	sub_odom_ = this->create_subscription<OdomMSG>("/odom", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
 
-	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drivestate_callback ,this ,std::placeholders::_1));
+	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drive_callback ,this ,std::placeholders::_1));
 	cb_group_status_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 	rclcpp::PublisherOptions pub_status_options;
 	pub_status_options.callback_group = cb_group_status_;
 	pub_status_ = this->create_publisher<StatusMSG>("/drive/obstacle/status", 1,pub_status_options);
 }
 
-void ObsDetection::drivestate_callback(const std::shared_ptr<DriveMSG> drive)
+void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 {
-	/*
 	resutlt_distance gps_distance;
 	CalcDistance calc;
 	double tm_x,tm_y;
@@ -46,7 +44,6 @@ void ObsDetection::drivestate_callback(const std::shared_ptr<DriveMSG> drive)
 		}
 		route_angle=atan2(tm_y,tm_x);
 	}
-	*/
 }
 
 void ObsDetection::odom_callback(const std::shared_ptr<OdomMSG> odom)
@@ -85,21 +82,6 @@ bool ObsDetection::area_check(double point_x, double point_y, double *check_area
 		}
 	}
 	return num_crosses % 2 > 0;
-}
-void ObsDetection::area_callback(const std::shared_ptr<AreaMSG> area)
-{
-	area_status=area->obstacle_area_status;
-
-	//status 1 : relative obstacle
-	obstacle_direction=area->obstacle_direction;
-	obstacle_distance=area->obstacle_distance;
-	obstacle_length=area->obstacle_length;
-
-	//status 2 : lat,long
-	area_lat_1=area->obstacle_lat_1;
-	area_long_1=area->obstacle_long_1;
-	area_lat_2=area->obstacle_lat_2;
-	area_long_1=area->obstacle_long_2;
 }
 
 void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
