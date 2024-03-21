@@ -1,1 +1,1 @@
-nav_msgs:obstacle_msgs:rclcpp:sensor_msgs
+nav_msgs:obstacle_msgs:rclcpp:route_msgs:sensor_msgs

@@ -900,6 +900,16 @@ CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: /home/nuc-bt/ros2_ws/src/
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/drive_state.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__builder.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__traits.hpp \
   /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/geo_trans.hpp \
   /usr/include/c++/11/math.h \
   /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/calc_distance.hpp \
@@ -3261,6 +3271,16 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: /home/nuc-b
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/drive_state.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__struct.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__builder.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__traits.hpp \
+  /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__traits.hpp \
   /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/geo_trans.hpp \
   /usr/include/c++/11/math.h \
   /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/calc_distance.hpp \
@@ -5123,17 +5143,17 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/geometries/multi_point.hpp:
 
-/usr/include/boost/mpl/vector/aux_/begin_end.hpp:
+/usr/include/boost/geometry/geometries/linestring.hpp:
 
-/usr/include/boost/mpl/prior.hpp:
+/usr/include/boost/geometry/geometries/geometries.hpp:
 
-/usr/include/boost/mpl/aux_/front_impl.hpp:
+/usr/include/boost/geometry/io/svg/write.hpp:
 
-/opt/ros/humble/include/rclcpp/rclcpp/parameter_map.hpp:
+/usr/include/boost/geometry/io/svg/svg_mapper.hpp:
 
-/usr/include/boost/geometry/algorithms/detail/overlay/copy_segment_point.hpp:
+/usr/include/boost/geometry/io/io.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
+/usr/include/boost/geometry/srs/srs.hpp:
 
 /usr/include/boost/mpl/plus.hpp:
 
@@ -5168,8 +5188,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/fold_impl.hpp:
 
 /usr/include/c++/11/bits/move.h:
-
-/usr/include/boost/mpl/aux_/has_size.hpp:
 
 /usr/include/boost/geometry/algorithms/convex_hull.hpp:
 
@@ -5369,8 +5387,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/intra_process_buffer.hpp:
 
-/usr/include/boost/mpl/aux_/has_apply.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
 
 /usr/include/boost/variant/variant_fwd.hpp:
@@ -5517,16 +5533,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/preprocessor/logical/and.hpp:
 
-/usr/include/boost/mpl/pop_back_fwd.hpp:
-
-/usr/include/boost/mpl/set/aux_/key_type_impl.hpp:
-
-/usr/include/boost/range/detail/extract_optional_type.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
-
-/usr/include/boost/geometry/views/detail/indexed_point_view.hpp:
-
 /usr/include/boost/preprocessor/debug/error.hpp:
 
 /usr/include/boost/mpl/integral_c_fwd.hpp:
@@ -5580,10 +5586,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/type_traits/is_convertible.hpp:
 
 /usr/include/boost/type_traits/has_plus.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
-
-/usr/include/boost/geometry/index/detail/translator.hpp:
 
 /usr/include/boost/config/workaround.hpp:
 
@@ -5661,6 +5663,38 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/quaternion/quaternion.hpp:
 
+/usr/include/boost/mpl/aux_/has_size.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__traits.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__struct.hpp:
+
+/usr/include/boost/mpl/pop_back_fwd.hpp:
+
+/usr/include/boost/mpl/set/aux_/key_type_impl.hpp:
+
+/usr/include/boost/range/detail/extract_optional_type.hpp:
+
+/usr/include/boost/geometry/index/detail/translator.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
+
+/usr/include/boost/geometry/views/detail/indexed_point_view.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__struct.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/distance/range_to_geometry_rtree.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/drive_state.hpp:
+
+/usr/include/c++/11/map:
+
+/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
 /usr/include/boost/preprocessor/tuple/eat.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp:
@@ -5704,6 +5738,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/detail/status__struct.hpp:
 
 /usr/include/boost/geometry/algorithms/clear.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__traits.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/nav_sat_fix.hpp:
 
@@ -5975,6 +6011,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/intrusive/detail/has_member_function_callable_with.hpp:
 
+/usr/include/boost/mpl/aux_/has_apply.hpp:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__traits.hpp:
+
 /usr/include/c++/11/bits/atomic_base.h:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
@@ -6159,6 +6199,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
 
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__struct.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/ctype.h:
@@ -6250,8 +6292,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/c++/11/functional:
 
 /usr/include/boost/preprocessor/arithmetic/mod.hpp:
-
-/usr/include/boost/preprocessor/enum_shifted_params.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -6581,8 +6621,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/stdlib.h:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp:
-
 /usr/include/c++/11/iosfwd:
 
 /usr/include/boost/mpl/vector/aux_/back.hpp:
@@ -6638,6 +6676,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/reverse_fold_impl.hpp:
 
 /usr/include/boost/qvm/detail/transp_impl.hpp:
+
+/usr/include/boost/mpl/iter_fold.hpp:
 
 /usr/include/boost/mpl/minus.hpp:
 
@@ -6733,6 +6773,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/preprocessor/control/if.hpp:
 
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__struct.hpp:
+
 /usr/include/boost/mpl/O1_size.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
@@ -6787,6 +6829,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/c++/11/bits/align.h:
 
+/usr/include/boost/geometry/algorithms/touches.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
+
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/boost/geometry/algorithms/detail/disjoint/linear_linear.hpp:
@@ -6816,6 +6862,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/preprocessor/facilities/identity.hpp:
 
 /usr/include/boost/rational.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/expand/implementation.hpp:
+
+/usr/include/boost/mpl/bool_fwd.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:
 
@@ -6894,6 +6944,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/util/select_coordinate_type.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/tupled_output.hpp:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/boost/geometry/strategies/cartesian/buffer_point_square.hpp:
 
 /usr/include/boost/function_types/detail/encoding/aliases_def.hpp:
 
@@ -7183,8 +7237,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rcl/rcl/init_options.h:
 
-/usr/include/boost/geometry/geometries/geometries.hpp:
-
 /usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
@@ -7267,12 +7319,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/utility/addressof.hpp:
 
-/usr/include/c++/11/map:
-
-/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
-
 /usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
 
 /usr/include/c++/11/bits/stl_multimap.h:
@@ -7302,8 +7348,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /opt/ros/humble/include/rcutils/rcutils/macros.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
-
-/usr/include/boost/geometry/io/svg/write.hpp:
 
 /opt/ros/humble/include/rmw/rmw/domain_id.h:
 
@@ -7354,6 +7398,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/move/detail/destruct_n.hpp:
 
 /usr/include/c++/11/variant:
+
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__traits.hpp:
 
 /usr/include/boost/concept_check.hpp:
 
@@ -7633,6 +7679,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rcl/rcl/logging_rosout.h:
 
+/usr/include/boost/preprocessor/enum_shifted_params.hpp:
+
 /opt/ros/humble/include/rmw/rmw/error_handling.h:
 
 /usr/include/boost/qvm/vec_access.hpp:
@@ -7689,6 +7737,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/util/promote_integral.hpp:
 
+/opt/ros/humble/include/rclcpp/rclcpp/parameter_map.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/overlay/copy_segment_point.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_base.hpp:
 
 /usr/include/boost/config/no_tr1/complex.hpp:
@@ -7716,10 +7768,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:
 
 /usr/include/boost/type_traits/add_pointer.hpp:
-
-/usr/include/boost/mpl/vector/aux_/size.hpp:
-
-/usr/include/boost/geometry/strategies/spherical/azimuth.hpp:
 
 /usr/include/c++/11/shared_mutex:
 
@@ -7785,6 +7833,20 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/algorithms/detail/envelope/box.hpp:
 
+/usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp:
+
+/usr/include/boost/mpl/prior.hpp:
+
+/usr/include/boost/mpl/aux_/front_impl.hpp:
+
+/usr/include/boost/geometry/strategies/spherical/azimuth.hpp:
+
+/usr/include/boost/mpl/vector/aux_/size.hpp:
+
+/usr/include/boost/mpl/vector/aux_/begin_end.hpp:
+
 /usr/include/boost/mpl/vector/aux_/include_preprocessed.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
@@ -7826,8 +7888,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/distance.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/turns/debug_turn.hpp:
-
-/usr/include/boost/mpl/iter_fold.hpp:
 
 /usr/include/boost/algorithm/string/find_iterator.hpp:
 
@@ -8171,9 +8231,9 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/detail/lcast_precision.hpp:
 
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp:
-
 /usr/include/boost/geometry/algorithms/detail/touches/implementation.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp:
 
 /usr/include/boost/integer_traits.hpp:
 
@@ -8535,6 +8595,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/views/identity_view.hpp:
 
+/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__builder.hpp:
+
 /usr/include/boost/algorithm/string/detail/replace_storage.hpp:
 
 /usr/include/boost/geometry/views/detail/two_dimensional_view.hpp:
@@ -8636,14 +8698,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/c++/11/bits/deque.tcc:
-
-/usr/include/boost/geometry/strategies/cartesian/buffer_point_square.hpp:
-
-/usr/include/c++/11/bits/stl_queue.h:
-
-/usr/include/boost/mpl/bool_fwd.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/expand/implementation.hpp:
 
 /usr/include/boost/geometry/strategies/geographic/envelope_segment.hpp:
 
@@ -8946,6 +9000,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/algorithm/minmax_element.hpp:
 
 /usr/include/boost/geometry/strategies/default_distance_result.hpp:
+
+/usr/include/boost/geometry/geometries/polygon.hpp:
+
+/usr/include/boost/geometry/util/compress_variant.hpp:
 
 /usr/include/boost/iterator/detail/config_undef.hpp:
 
@@ -9449,6 +9507,14 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/container/detail/iterator.hpp:
 
+/usr/include/boost/geometry/algorithms/unique.hpp:
+
+/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/parameter_value.hpp:
+
+/usr/include/boost/intrusive/detail/iterator.hpp:
+
 /usr/include/boost/container/detail/algorithm.hpp:
 
 /usr/include/boost/mpl/empty.hpp:
@@ -9667,8 +9733,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/algorithms/detail/distance/multipoint_to_geometry.hpp:
 
-/usr/include/boost/geometry/algorithms/detail/distance/range_to_geometry_rtree.hpp:
-
 /usr/include/boost/geometry/iterators/has_one_element.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/closest_feature/range_to_range.hpp:
@@ -9814,27 +9878,3 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/algorithms/detail/relation/interface.hpp:
 
 /usr/include/boost/geometry/geometries/multi_polygon.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
-
-/usr/include/boost/geometry/algorithms/touches.hpp:
-
-/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/parameter_value.hpp:
-
-/usr/include/boost/intrusive/detail/iterator.hpp:
-
-/usr/include/boost/geometry/algorithms/unique.hpp:
-
-/usr/include/boost/geometry/srs/srs.hpp:
-
-/usr/include/boost/geometry/io/io.hpp:
-
-/usr/include/boost/geometry/io/svg/svg_mapper.hpp:
-
-/usr/include/boost/geometry/geometries/linestring.hpp:
-
-/usr/include/boost/geometry/util/compress_variant.hpp:
-
-/usr/include/boost/geometry/geometries/polygon.hpp:

@@ -6,10 +6,47 @@ ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	sub_gps_ = this->create_subscription<GpsMSG>("/sensor/ublox/fix", 1, std::bind(&ObsDetection::gps_callback ,this ,std::placeholders::_1));
 	sub_odom_ = this->create_subscription<OdomMSG>("/odom", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
 
+	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drivestate_callback ,this ,std::placeholders::_1));
 	cb_group_status_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 	rclcpp::PublisherOptions pub_status_options;
 	pub_status_options.callback_group = cb_group_status_;
 	pub_status_ = this->create_publisher<StatusMSG>("/drive/obstacle/status", 1,pub_status_options);
+}
+
+void ObsDetection::drivestate_callback(const std::shared_ptr<DriveMSG> drive)
+{
+	/*
+	resutlt_distance gps_distance;
+	CalcDistance calc;
+	double tm_x,tm_y;
+	if(drive->code.compare("arrive")==0)
+	{
+		node_lat=drive->end_node.position.latitude;
+		node_long=drive->end_node.position.longitude;
+		node_offset=drive->end_node.detection_range[0].offset;
+		area_width_l = drive->end_node.detection_range[0].width_left;
+		area_width_r = drive->end_node.detection_range[0].width_right;
+		area_height = drive->end_node.detection_range[0].height;
+		gps_distance = calc.getDistance(drive->start_node.position.latitude, drive->start_node.position.longitude, drive->end_node.position.latitude, drive->end_node.position.longitude,KTM);
+		if((drive->end_node.position.latitude - drive->start_node.position.latitude) > 0)
+		{
+			tm_y=gps_distance.distance_y;
+		}
+		else
+		{
+			tm_y=-gps_distance.distance_y;
+		}
+		if((drive->end_node.position.longitude - drive->start_node.position.longitude) > 0)
+		{
+			tm_x=gps_distance.distance_x;
+		}
+		else
+		{
+			tm_x=-gps_distance.distance_x;
+		}
+		route_angle=atan2(tm_y,tm_x);
+	}
+	*/
 }
 
 void ObsDetection::odom_callback(const std::shared_ptr<OdomMSG> odom)
@@ -25,38 +62,13 @@ void ObsDetection::gps_callback(const std::shared_ptr<GpsMSG> gps)
 {
 	robot_lat=gps->latitude;
 	robot_long=gps->longitude;
-
 }
-/*
-   public static boolean isInside(GeoPoint B, List<GeoPoint> p) {
-   int crosses = 0;
-   int n = p.size();
 
-   for (int i = 0; i < n; i++) 
-   {
-   int j = (i + 1) % n;
-
-   if ((p.get(i).getLongitude() > B.getLongitude()) != (p.get(j).getLongitude() > B.getLongitude())) 
-   {
-   double atX = 
-   (p.get(j).getLatitude() - p.get(i).getLatitude()) 
- * (B.getLongitude() - p.get(i).getLongitude()) 
- / (p.get(j).getLongitude() - p.get(i).getLongitude()) 
- + p.get(i).getLatitude();
-
- if (B.getLatitude() < atX)
- crosses++;
- }
- }
-
- return crosses % 2 > 0;
- }
- */
 bool ObsDetection::area_check(double point_x, double point_y, double *check_area)
 {
 	int num_crosses=0;
 	int area_num=4;
-	
+
 	for( int lp=0;lp < area_num;lp++)
 	{
 		int lp_y = (lp+1)%area_num;
@@ -93,17 +105,14 @@ void ObsDetection::area_callback(const std::shared_ptr<AreaMSG> area)
 void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	resutlt_distance gps_distance;
 	CalcDistance calc;
-	int robot_detect_x,robot_detect_y;
 	int lp,lp_x,lp_y;
 
 	memset(obs_area,0,sizeof(obs_area));
 	StatusMSG status;
 	////tmp value
 	//
-	double node_lat, node_long, node_offset, node_x, node_y,area_start_x, area_start_y;
-	double area_width_l,area_width_r, area_height;
-	double route_angle;
-	
+	double node_x, node_y,area_start_x, area_start_y;
+
 	if(fabs(odom_vel_x >= 0.1))
 	{
 		area_status=0;
@@ -228,20 +237,17 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	pub_status_->publish(status);
-	/*
-	detect_area[detect_arealen/2][detect_arealen/2]=5;
-	printf("\e[1;1H\e[2J");
-	for(lp_y=0;lp_y < detect_arealen;lp_y++)
-	{
-		for(lp_x=0;lp_x < detect_arealen;lp_x++)
-		{
-			printf("%d",detect_area[lp_x][lp_y]);
-		}
-		printf("\n");
-	}
-	printf("\n\n\n");
-	*/
+	/**/
+	   detect_area[detect_arealen/2][detect_arealen/2]=5;
+	   printf("\e[1;1H\e[2J");
+	   for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	   {
+	   for(lp_x=0;lp_x < detect_arealen;lp_x++)
+	   {
+	   printf("%d",detect_area[lp_x][lp_y]);
+	   }
+	   printf("\n");
+	   }
+	   printf("\n\n\n");
+	   /**/
 }
-
-
-

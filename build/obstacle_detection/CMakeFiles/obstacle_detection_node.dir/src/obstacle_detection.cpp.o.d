@@ -648,6 +648,16 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/drive_state.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__struct.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__struct.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__struct.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__struct.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__builder.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/drive_state__traits.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/node__traits.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/position__traits.hpp \
+ /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__traits.hpp \
  /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/geo_trans.hpp \
  /usr/include/c++/11/math.h \
  /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/include/distance/calc_distance.hpp \

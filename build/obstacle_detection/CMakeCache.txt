@@ -271,6 +271,9 @@ TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 //Path to a library.
 _lib:FILEPATH=/opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
 
+//The directory containing a CMake configuration file for action_msgs.
+action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
+
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
 
@@ -457,6 +460,9 @@ rosidl_typesupport_introspection_c_DIR:PATH=/opt/ros/humble/share/rosidl_typesup
 //The directory containing a CMake configuration file for rosidl_typesupport_introspection_cpp.
 rosidl_typesupport_introspection_cpp_DIR:PATH=/opt/ros/humble/share/rosidl_typesupport_introspection_cpp/cmake
 
+//The directory containing a CMake configuration file for route_msgs.
+route_msgs_DIR:PATH=/home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/share/route_msgs/cmake
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/humble/share/sensor_msgs/cmake
 
@@ -474,6 +480,9 @@ std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for tracetools.
 tracetools_DIR:PATH=/opt/ros/humble/share/tracetools/cmake
+
+//The directory containing a CMake configuration file for unique_identifier_msgs.
+unique_identifier_msgs_DIR:PATH=/opt/ros/humble/share/unique_identifier_msgs/cmake
 
 //The directory containing a CMake configuration file for yaml.
 yaml_DIR:PATH=/opt/ros/humble/cmake
