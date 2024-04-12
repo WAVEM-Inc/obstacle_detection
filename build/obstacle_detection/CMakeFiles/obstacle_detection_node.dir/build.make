@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection
 
 # Include any dependencies generated for this target.
 include CMakeFiles/obstacle_detection_node.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/obstacle_detection_node.dir/progress.make
 include CMakeFiles/obstacle_detection_node.dir/flags.make
 
 CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
-CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/main.cpp
+CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/main.cpp
 CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o -c /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/main.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/main.cpp > CMakeFiles/obstacle_detection_node.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/main.cpp > CMakeFiles/obstacle_detection_node.dir/src/main.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/main.cpp -o CMakeFiles/obstacle_detection_node.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/main.cpp -o CMakeFiles/obstacle_detection_node.dir/src/main.cpp.s
 
 CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
-CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp
+CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp
 CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o -c /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp > CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp > CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp -o CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/obstacle_detection.cpp -o CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.s
 
 CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
-CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp
+CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/calc_distance.cpp
 CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.o -c /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/calc_distance.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp > CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/calc_distance.cpp > CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/calc_distance.cpp -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/calc_distance.cpp -o CMakeFiles/obstacle_detection_node.dir/src/calc_distance.cpp.s
 
 CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: CMakeFiles/obstacle_detection_node.dir/flags.make
-CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
+CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
 CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: CMakeFiles/obstacle_detection_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -c /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -MF CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o.d -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o -c /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp
 
 CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp > CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp > CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.i
 
 CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/src/quaternion/quaternion.cpp -o CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.s
 
 # Object files for target obstacle_detection_node
 obstacle_detection_node_OBJECTS = \
@@ -146,24 +146,24 @@ obstacle_detection_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_
 obstacle_detection_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libsensor_msgs__rosidl_generator_py.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_fastrtps_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_fastrtps_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_introspection_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_introspection_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_generator_py.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_fastrtps_c.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_fastrtps_cpp.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_introspection_c.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_introspection_cpp.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_cpp.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_generator_py.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_fastrtps_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_introspection_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_typesupport_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_py.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_py.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_c.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_fastrtps_cpp.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_c.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_introspection_cpp.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_cpp.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_py.so
 obstacle_detection_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 obstacle_detection_node: /opt/ros/humble/lib/librcl.so
 obstacle_detection_node: /opt/ros/humble/lib/librmw_implementation.so
@@ -210,8 +210,8 @@ obstacle_detection_node: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_
 obstacle_detection_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_introspection_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libunique_identifier_msgs__rosidl_typesupport_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/gps_navigation/route_msgs/install/route_msgs/lib/libroute_msgs__rosidl_generator_c.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_typesupport_c.so
+obstacle_detection_node: /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/lib/libroute_msgs__rosidl_generator_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_py.so
 obstacle_detection_node: /opt/ros/humble/lib/libaction_msgs__rosidl_typesupport_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libaction_msgs__rosidl_generator_c.so
@@ -245,8 +245,8 @@ obstacle_detection_node: /opt/ros/humble/lib/librosidl_typesupport_introspection
 obstacle_detection_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 obstacle_detection_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_c.so
-obstacle_detection_node: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_c.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_typesupport_c.so
+obstacle_detection_node: /home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/lib/libobstacle_msgs__rosidl_generator_c.so
 obstacle_detection_node: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
 obstacle_detection_node: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_py.so
 obstacle_detection_node: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -259,7 +259,7 @@ obstacle_detection_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 obstacle_detection_node: /opt/ros/humble/lib/librcutils.so
 obstacle_detection_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 obstacle_detection_node: CMakeFiles/obstacle_detection_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable obstacle_detection_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable obstacle_detection_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obstacle_detection_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -271,6 +271,6 @@ CMakeFiles/obstacle_detection_node.dir/clean:
 .PHONY : CMakeFiles/obstacle_detection_node.dir/clean
 
 CMakeFiles/obstacle_detection_node.dir/depend:
-	cd /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/obstacle_detection_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles/obstacle_detection_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/obstacle_detection_node.dir/depend
 

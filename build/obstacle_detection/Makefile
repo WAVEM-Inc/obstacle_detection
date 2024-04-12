@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs
 
 # Utility rule file for obstacle_msgs__cpp.
 
@@ -124,8 +124,8 @@ rosidl_generator_cpp/obstacle_msgs/msg/status.hpp: /opt/ros/humble/share/std_msg
 rosidl_generator_cpp/obstacle_msgs/msg/status.hpp: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
 rosidl_generator_cpp/obstacle_msgs/msg/status.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
 rosidl_generator_cpp/obstacle_msgs/msg/status.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/obstacle_msgs/msg/detail/status__builder.hpp: rosidl_generator_cpp/obstacle_msgs/msg/status.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/obstacle_msgs/msg/detail/status__builder.hpp
@@ -169,6 +169,6 @@ CMakeFiles/obstacle_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/obstacle_msgs__cpp.dir/clean
 
 CMakeFiles/obstacle_msgs__cpp.dir/depend:
-	cd /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/CMakeFiles/obstacle_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/CMakeFiles/obstacle_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/obstacle_msgs__cpp.dir/depend
 

@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs/${destination}")
+      set(destination "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,125 +310,125 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_fastrtps_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_c/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.h")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_typesupport_introspection_cpp/obstacle_msgs/" "DESTINATION" "include/obstacle_msgs/obstacle_msgs" "PATTERN" "*.hpp")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/obstacle_msgs/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs-0.0.0-py3.10.egg-info")
 
-# install(DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" DIRECTORY "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install("TARGETS" "obstacle_msgs__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs")
-include("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "obstacle_msgs__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs")
-include("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "obstacle_msgs__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/obstacle_msgs")
-include("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Status.idl" "DESTINATION" "share/obstacle_msgs/msg")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Status.idl" "DESTINATION" "share/obstacle_msgs/msg")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Status.idl" "DESTINATION" "share/obstacle_msgs/msg")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Status.idl" "DESTINATION" "share/obstacle_msgs/msg")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Area.idl" "DESTINATION" "share/obstacle_msgs/msg")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Area.idl" "DESTINATION" "share/obstacle_msgs/msg")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Area.idl" "DESTINATION" "share/obstacle_msgs/msg")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_adapter/obstacle_msgs/msg/Area.idl" "DESTINATION" "share/obstacle_msgs/msg")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Status.msg" "DESTINATION" "share/obstacle_msgs/msg")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Status.msg" "DESTINATION" "share/obstacle_msgs/msg")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Status.msg" "DESTINATION" "share/obstacle_msgs/msg")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Status.msg" "DESTINATION" "share/obstacle_msgs/msg")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Area.msg" "DESTINATION" "share/obstacle_msgs/msg")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Area.msg" "DESTINATION" "share/obstacle_msgs/msg")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Area.msg" "DESTINATION" "share/obstacle_msgs/msg")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Area.msg" "DESTINATION" "share/obstacle_msgs/msg")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_msgs/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_msgs")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_msgs")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_msgs")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_msgs")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_msgs")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig.cmake" "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig-version.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig.cmake" "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig-version.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig.cmake" "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig-version.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig.cmake" "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_core/obstacle_msgsConfig-version.cmake" "DESTINATION" "share/obstacle_msgs/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/package.xml" "DESTINATION" "share/obstacle_msgs")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/package.xml" "DESTINATION" "share/obstacle_msgs")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/package.xml" "DESTINATION" "share/obstacle_msgs")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/package.xml" "DESTINATION" "share/obstacle_msgs")

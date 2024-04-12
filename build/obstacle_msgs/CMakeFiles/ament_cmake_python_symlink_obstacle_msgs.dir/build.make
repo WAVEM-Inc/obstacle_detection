@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs
 
 # Utility rule file for ament_cmake_python_symlink_obstacle_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/compiler_depend.
 include CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_symlink_obstacle_msgs:
-	/usr/bin/cmake -E create_symlink /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs
+	/usr/bin/cmake -E create_symlink /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_python/obstacle_msgs/obstacle_msgs
 
 ament_cmake_python_symlink_obstacle_msgs: CMakeFiles/ament_cmake_python_symlink_obstacle_msgs
 ament_cmake_python_symlink_obstacle_msgs: CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/depend:
-	cd /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_symlink_obstacle_msgs.dir/depend
 

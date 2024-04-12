@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs
 
 # Utility rule file for obstacle_msgs.
 
@@ -66,8 +66,8 @@ include CMakeFiles/obstacle_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/obstacle_msgs.dir/progress.make
 
-CMakeFiles/obstacle_msgs: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Status.msg
-CMakeFiles/obstacle_msgs: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs/msg/Area.msg
+CMakeFiles/obstacle_msgs: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Status.msg
+CMakeFiles/obstacle_msgs: /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Area.msg
 CMakeFiles/obstacle_msgs: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 CMakeFiles/obstacle_msgs: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 CMakeFiles/obstacle_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
@@ -114,6 +114,6 @@ CMakeFiles/obstacle_msgs.dir/clean:
 .PHONY : CMakeFiles/obstacle_msgs.dir/clean
 
 CMakeFiles/obstacle_msgs.dir/depend:
-	cd /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/CMakeFiles/obstacle_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/CMakeFiles/obstacle_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/obstacle_msgs.dir/depend
 

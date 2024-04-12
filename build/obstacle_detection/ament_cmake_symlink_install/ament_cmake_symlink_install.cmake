@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_detection/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection/${destination}")
+      set(destination "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_detection/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,46 +311,46 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "obstacle_detection_node" "DESTINATION" "lib/obstacle_detection")
-include("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_detection/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_detection/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/obstacle_detection/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_detection/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_detection/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_detection/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/obstacle_detection/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_detection/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_detection/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/obstacle_detection/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_detection/environment")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_detection/environment")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_detection/environment")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/obstacle_detection/environment")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/obstacle_detection")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/obstacle_detection")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/obstacle_detection")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/obstacle_detection")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/obstacle_detection")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_index/share/ament_index/resource_index/packages/obstacle_detection" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig.cmake" "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig-version.cmake" "DESTINATION" "share/obstacle_detection/cmake")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig.cmake" "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig-version.cmake" "DESTINATION" "share/obstacle_detection/cmake")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig.cmake" "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig-version.cmake" "DESTINATION" "share/obstacle_detection/cmake")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig.cmake" "/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/ament_cmake_core/obstacle_detectionConfig-version.cmake" "DESTINATION" "share/obstacle_detection/cmake")
 
-# install(FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/package.xml" "DESTINATION" "share/obstacle_detection")
-ament_cmake_symlink_install_files("/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection/package.xml" "DESTINATION" "share/obstacle_detection")
+# install(FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/package.xml" "DESTINATION" "share/obstacle_detection")
+ament_cmake_symlink_install_files("/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection" FILES "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection/package.xml" "DESTINATION" "share/obstacle_detection")

@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_detection"}
+: ${AMENT_CURRENT_PREFIX:="/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_detection"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

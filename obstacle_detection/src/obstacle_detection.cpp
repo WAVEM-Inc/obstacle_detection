@@ -1,7 +1,7 @@
 #include"obstacle_detection.hpp"
 
 ObsDetection::ObsDetection():Node("obstacle_detection_node"){
-	sub_scan_ = this->create_subscription<LidarMSG>("/scan", 1, std::bind(&ObsDetection::scan_callback ,this ,std::placeholders::_1));
+	sub_scan_ = this->create_subscription<LidarMSG>("/scan/multi", 1, std::bind(&ObsDetection::scan_callback ,this ,std::placeholders::_1));
 	sub_gps_ = this->create_subscription<GpsMSG>("/sensor/ublox/fix", 1, std::bind(&ObsDetection::gps_callback ,this ,std::placeholders::_1));
 	sub_odom_ = this->create_subscription<OdomMSG>("/odom", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
 
@@ -16,33 +16,45 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 {
 	resutlt_distance gps_distance;
 	CalcDistance calc;
+	int lp;
 	double tm_x,tm_y;
-	if(drive->code.compare("arrive")==0)
+	if(drive->code.compare(std::string("arrive"))==0)
 	{
-		node_lat=drive->end_node.position.latitude;
-		node_long=drive->end_node.position.longitude;
-		node_offset=drive->end_node.detection_range[0].offset;
-		area_width_l = drive->end_node.detection_range[0].width_left;
-		area_width_r = drive->end_node.detection_range[0].width_right;
-		area_height = drive->end_node.detection_range[0].height;
-		gps_distance = calc.getDistance(drive->start_node.position.latitude, drive->start_node.position.longitude, drive->end_node.position.latitude, drive->end_node.position.longitude,KTM);
-		if((drive->end_node.position.latitude - drive->start_node.position.latitude) > 0)
+		memset(node_offset,0,sizeof(node_offset));
+		memset(area_width_l,0,sizeof(area_width_l));
+		memset(area_width_r,0,sizeof(area_width_r));
+		memset(area_height,0,sizeof(area_height));
+		if(drive->end_node.kind.compare(std::string("waiting"))==0)
 		{
-			tm_y=gps_distance.distance_y;
+			area_status=1;
+			node_lat=drive->end_node.position.latitude;
+			node_long=drive->end_node.position.longitude;
+			for(lp =0;lp< 1 ;lp++)
+			{
+				node_offset[lp]=drive->end_node.detection_range[lp].offset;
+				area_width_l[lp] = drive->end_node.detection_range[lp].width_left;
+				area_width_r[lp] = drive->end_node.detection_range[lp].width_right;
+				area_height[lp] = drive->end_node.detection_range[lp].height;
+			}
+			gps_distance = calc.getDistance(drive->start_node.position.latitude, drive->start_node.position.longitude, drive->end_node.position.latitude, drive->end_node.position.longitude,KTM);
+			if((drive->end_node.position.latitude - drive->start_node.position.latitude) > 0)
+			{
+				tm_y=gps_distance.distance_y;
+			}
+			else
+			{
+				tm_y=-gps_distance.distance_y;
+			}
+			if((drive->end_node.position.longitude - drive->start_node.position.longitude) > 0)
+			{
+				tm_x=gps_distance.distance_x;
+			}
+			else
+			{
+				tm_x=-gps_distance.distance_x;
+			}
+			route_angle=atan2(tm_y,tm_x);
 		}
-		else
-		{
-			tm_y=-gps_distance.distance_y;
-		}
-		if((drive->end_node.position.longitude - drive->start_node.position.longitude) > 0)
-		{
-			tm_x=gps_distance.distance_x;
-		}
-		else
-		{
-			tm_x=-gps_distance.distance_x;
-		}
-		route_angle=atan2(tm_y,tm_x);
 	}
 }
 
@@ -65,16 +77,17 @@ bool ObsDetection::area_check(double point_x, double point_y, double *check_area
 {
 	int num_crosses=0;
 	int area_num=4;
-
+	point_x+=DETECT_SIZE;
+	point_y+=DETECT_SIZE;
 	for( int lp=0;lp < area_num;lp++)
 	{
 		int lp_y = (lp+1)%area_num;
-		if ((check_area[lp*2+1] > point_y) != (check_area[lp_y*2+1] > point_y)) 
+		if (((check_area[lp*2+1] +DETECT_SIZE) > point_y) != ((check_area[lp_y*2+1] +DETECT_SIZE) > point_y)) 
 		{
-			double atX=(check_area[lp_y*2] - check_area[lp*2]) 
-				* (point_y - check_area[lp*2+1])
-				/ (check_area[lp_y*2+1] - check_area[lp*2+1])
-				+ check_area[lp*2];
+			double atX=((check_area[lp_y*2] +DETECT_SIZE)- (check_area[lp*2] +DETECT_SIZE)) 
+				* (point_y - (check_area[lp*2+1] +DETECT_SIZE))
+				/ ((check_area[lp_y*2+1] +DETECT_SIZE) - (check_area[lp*2+1] +DETECT_SIZE))
+				+ (check_area[lp*2] +DETECT_SIZE);
 			if( point_x < atX )
 			{
 				num_crosses++;
@@ -104,6 +117,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		case 1:
 		case 2:
 			robot_angle=qua_.getterYaw();
+			global_angle=-90*M_PI/180;
 			gps_distance = calc.getDistance(robot_lat, robot_long, node_lat, node_long,KTM);
 			if((node_lat - robot_lat) > 0)
 			{
@@ -121,33 +135,34 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			{
 				node_x=-gps_distance.distance_x;
 			}
-			area_start_x=node_x+node_offset*cos(route_angle);
-			area_start_y=node_y+node_offset*sin(route_angle);
+			area_start_x=node_x+node_offset[0]*cos(route_angle);
+			area_start_y=node_y+node_offset[0]*sin(route_angle);
 
-			area_x1=area_start_x+area_width_l*cos(route_angle+90*M_PI/180);
-			area_y1=area_start_y+area_width_r*sin(route_angle+90*M_PI/180);
-			area_x2=area_x1+area_height*cos(route_angle);
-			area_y2=area_x1+area_height*sin(route_angle);
-			area_x3=area_start_x+area_width_l*cos(route_angle-90*M_PI/180);
-			area_y3=area_start_y+area_width_r*sin(route_angle-90*M_PI/180);
-			area_x4=area_x3+area_height*cos(route_angle);
-			area_y4=area_y3+area_height*sin(route_angle);
+			area_x1=area_start_x+area_width_r[0]*cos(route_angle+90*M_PI/180);
+			area_y1=area_start_y+area_width_r[0]*sin(route_angle+90*M_PI/180);
+			area_x2=area_x1+area_height[0]*cos(route_angle);
+			area_y2=area_y1+area_height[0]*sin(route_angle);
+			area_x3=area_start_x+area_width_l[0]*cos(route_angle-90*M_PI/180);
+			area_y3=area_start_y+area_width_l[0]*sin(route_angle-90*M_PI/180);
+			area_x4=area_x3+area_height[0]*cos(route_angle);
+			area_y4=area_y3+area_height[0]*sin(route_angle);
 			obs_area[0] =area_x1;
-			obs_area[1] =area_y1;
+			obs_area[1] =-area_y1;
 			obs_area[2] =area_x2;
-			obs_area[3] =area_y2;
+			obs_area[3] =-area_y2;
 			obs_area[4] =area_x3;
-			obs_area[5] =area_y3;
+			obs_area[5] =-area_y3;
 			obs_area[6] =area_x4;
-			obs_area[7] =area_y4;
+			obs_area[7] =-area_y4;
 			break;	
 		default:
 			robot_angle=0;
-			area_x1=-CAR_WIDTH/2;
-			area_x2=CAR_WIDTH/2;
+			global_angle=0;
+			area_x1=-(CAR_WIDTH/2+7);
+			area_x2=CAR_WIDTH/2+7;
 			if(odom_vel_x >= 0)
 			{
-				area_y1=-OBS_MOVE_DIST;
+				area_y1=-OBS_MOVE_DIST-1;
 				area_y2=0;
 			}
 			else
@@ -160,9 +175,9 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			obs_area[2] =area_x2;
 			obs_area[3] =-area_y1;
 			obs_area[4] =area_x2;
-			obs_area[5] =area_y2;
+			obs_area[5] =-area_y2;
 			obs_area[6] =area_x1;
-			obs_area[7] =area_y2;
+			obs_area[7] =-area_y2;
 			break;	
 	}
 	int num_ranges = scan->ranges.size();
@@ -175,11 +190,11 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	{
 		if((!std::isnan(scan->ranges[lp])) && (scan->ranges[lp] > 0.019 && ((scan->ranges[lp]-scan->ranges[lp-1]) < SCAN_FILTER_DIST )))
 		{
-			occ_x=-scan->ranges[lp]*sin( (scan->angle_min+scan->angle_increment*lp+robot_angle) );
-			occ_y=-scan->ranges[lp]*cos( (scan->angle_min+scan->angle_increment*lp+robot_angle) );
+			occ_x=-scan->ranges[lp]*sin( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
+			occ_y=-scan->ranges[lp]*cos( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
 			if((fabs(occ_x) < DETECT_SIZE) && (fabs(occ_y) < DETECT_SIZE))
 			{
-				detect_area[int((DETECT_SIZE+occ_x)*DETECT_RES)][int((DETECT_SIZE+occ_y)*DETECT_RES)]=1;
+				detect_area[(int)((DETECT_SIZE+occ_x)*DETECT_RES)][(int)((DETECT_SIZE+occ_y)*DETECT_RES)]=1;
 			}
 		}
 	}
@@ -192,9 +207,9 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		{
 			if(detect_area[lp_x][lp_y] > 0)
 			{
-				if(area_check((double)(lp_x-detect_arealen/2)/DETECT_RES ,(double)(detect_arealen/2-lp_y)/DETECT_RES,obs_area ) )
+				if(area_check((double)((lp_x-detect_arealen/2)/DETECT_RES) ,(double)((detect_arealen/2-lp_y)/DETECT_RES),obs_area ) )
 				{
-					detect_area[lp_x][lp_y] = 2;
+					detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
 					detect_val=1;
 					if(area_status >= 1)
 					{
@@ -202,7 +217,6 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 						{
 							obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
 						}
-
 					}
 					else
 					{
@@ -219,17 +233,25 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	pub_status_->publish(status);
+	if((area_status > 0) && detect_val==0 )
+	{
+		//	area_status=0;
+	}
 	/**/
-	   detect_area[detect_arealen/2][detect_arealen/2]=5;
-	   printf("\e[1;1H\e[2J");
-	   for(lp_y=0;lp_y < detect_arealen;lp_y++)
-	   {
-	   for(lp_x=0;lp_x < detect_arealen;lp_x++)
-	   {
-	   printf("%d",detect_area[lp_x][lp_y]);
-	   }
-	   printf("\n");
-	   }
-	   printf("\n\n\n");
-	   /**/
+	detect_area[detect_arealen/2][detect_arealen/2]=8;
+	printf("\e[1;1H\e[2J");
+	for(int i=0;i<4;i++)
+	{
+		detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=7;
+	}
+	for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	{
+		for(lp_x=0;lp_x < detect_arealen;lp_x++)
+		{
+			printf(" %d ",detect_area[lp_x][lp_y]);
+		}
+		printf("\n");
+	}
+	printf("\n\n\n");
+	/**/
 }

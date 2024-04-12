@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection
+CMAKE_SOURCE_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection
+CMAKE_BINARY_DIR = /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_detection/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_detection/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

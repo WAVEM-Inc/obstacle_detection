@@ -1,8 +1,8 @@
-# Install script for directory: /home/nuc-bt/ros2_ws/src/drive/obstacle_detection/build/obstacle_msgs/obstacle_msgs__py
+# Install script for directory: /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/obstacle_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nuc-bt/ros2_ws/src/drive/obstacle_detection/install/obstacle_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/nuc-bt/Downloads/test_ws/obstacle_detection/install/obstacle_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
