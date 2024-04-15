@@ -34,6 +34,8 @@ cdr_serialize(
 {
   // Member: obstacle_status
   cdr << ros_message.obstacle_status;
+  // Member: obstacle_type
+  cdr << ros_message.obstacle_type;
   // Member: obstacle_value
   cdr << (ros_message.obstacle_value ? true : false);
   // Member: obstacle_distance
@@ -51,6 +53,9 @@ cdr_deserialize(
 {
   // Member: obstacle_status
   cdr >> ros_message.obstacle_status;
+
+  // Member: obstacle_type
+  cdr >> ros_message.obstacle_type;
 
   // Member: obstacle_value
   {
@@ -84,6 +89,12 @@ get_serialized_size(
   // Member: obstacle_status
   {
     size_t item_size = sizeof(ros_message.obstacle_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: obstacle_type
+  {
+    size_t item_size = sizeof(ros_message.obstacle_type);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -128,6 +139,14 @@ max_serialized_size_Status(
 
 
   // Member: obstacle_status
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: obstacle_type
   {
     size_t array_size = 1;
 

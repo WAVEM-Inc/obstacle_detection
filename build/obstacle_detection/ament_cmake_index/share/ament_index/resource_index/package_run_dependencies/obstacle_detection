@@ -1,1 +1,1 @@
-route_msgs;sensor_msgs;nav_msgs;obstacle_msgs;rclcpp;ament_lint_auto;ament_lint_common
+route_msgs;sensor_msgs;nav_msgs;ktp_data_msgs;obstacle_msgs;rclcpp;ament_lint_auto;ament_lint_common

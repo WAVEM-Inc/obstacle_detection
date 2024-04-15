@@ -11,6 +11,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(route_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(obstacle_msgs REQUIRED)
+find_package(ktp_data_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 include_directories(
   include
@@ -31,6 +32,7 @@ set(dependencies
   route_msgs
   nav_msgs
   obstacle_msgs
+  ktp_data_msgs
 )
 
 set(node_name

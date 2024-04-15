@@ -39,6 +39,7 @@ struct Status_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->obstacle_status = 0;
+      this->obstacle_type = 0;
       this->obstacle_value = false;
       this->obstacle_distance = 0.0;
       this->obstacle_id = "";
@@ -52,6 +53,7 @@ struct Status_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->obstacle_status = 0;
+      this->obstacle_type = 0;
       this->obstacle_value = false;
       this->obstacle_distance = 0.0;
       this->obstacle_id = "";
@@ -62,6 +64,9 @@ struct Status_
   using _obstacle_status_type =
     int8_t;
   _obstacle_status_type obstacle_status;
+  using _obstacle_type_type =
+    int8_t;
+  _obstacle_type_type obstacle_type;
   using _obstacle_value_type =
     bool;
   _obstacle_value_type obstacle_value;
@@ -77,6 +82,12 @@ struct Status_
     const int8_t & _arg)
   {
     this->obstacle_status = _arg;
+    return *this;
+  }
+  Type & set__obstacle_type(
+    const int8_t & _arg)
+  {
+    this->obstacle_type = _arg;
     return *this;
   }
   Type & set__obstacle_value(
@@ -141,6 +152,9 @@ struct Status_
   bool operator==(const Status_ & other) const
   {
     if (this->obstacle_status != other.obstacle_status) {
+      return false;
+    }
+    if (this->obstacle_type != other.obstacle_type) {
       return false;
     }
     if (this->obstacle_value != other.obstacle_value) {

@@ -10,9 +10,12 @@
 #include <iostream>
 #include <fstream>
 #include <fcntl.h>
+#include <malloc.h>
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
+#include "std_msgs/msg/string.hpp"
 #include "sensor_msgs/msg/nav_sat_fix.hpp"
+#include "ktp_data_msgs/msg/detected_object.hpp"
 #include "obstacle_msgs/msg/area.hpp"
 #include "obstacle_msgs/msg/status.hpp"
 #include "nav_msgs/msg/odometry.hpp"
@@ -29,6 +32,8 @@ using AreaMSG = obstacle_msgs::msg::Area;
 using StatusMSG = obstacle_msgs::msg::Status;
 using OdomMSG = nav_msgs::msg::Odometry;
 using DriveMSG = route_msgs::msg::DriveState;
+using StringMSG = std_msgs::msg::String;
+using DetectMSG = ktp_data_msgs::msg::DetectedObject;
 class ObsDetection : public rclcpp::Node{
 	private :
 		rclcpp::CallbackGroup::SharedPtr cb_group_status_;
@@ -38,12 +43,14 @@ class ObsDetection : public rclcpp::Node{
 		rclcpp::Subscription<GpsMSG>::SharedPtr sub_gps_;
 		rclcpp::Subscription<LidarMSG>::SharedPtr sub_scan_;
 		rclcpp::Subscription<DriveMSG>::SharedPtr sub_drive_;
+		rclcpp::Subscription<DetectMSG>::SharedPtr sub_detect_;
 		Quaternion qua_;
 		void scan_callback(const std::shared_ptr<LidarMSG> scan);
 		void gps_callback(const std::shared_ptr<GpsMSG> gps);
 		void odom_callback(const std::shared_ptr<OdomMSG> odom);
 
 		void drive_callback(const std::shared_ptr<DriveMSG> drive);
+		void detect_callback(const std::shared_ptr<DetectMSG> detect);
 		bool area_check(double point_x, double point_y, double *area);
 		double area_x1, area_x2, area_y1, area_y2,area_x3,area_y3,area_x4,area_y4;
 		double obs_area[8];

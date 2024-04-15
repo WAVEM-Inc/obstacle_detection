@@ -58,6 +58,7 @@ class Status(metaclass=Metaclass_Status):
 
     __slots__ = [
         '_obstacle_status',
+        '_obstacle_type',
         '_obstacle_value',
         '_obstacle_distance',
         '_obstacle_id',
@@ -65,12 +66,14 @@ class Status(metaclass=Metaclass_Status):
 
     _fields_and_field_types = {
         'obstacle_status': 'int8',
+        'obstacle_type': 'int8',
         'obstacle_value': 'boolean',
         'obstacle_distance': 'double',
         'obstacle_id': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('int8'),  # noqa: E501
         rosidl_parser.definition.BasicType('int8'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -82,6 +85,7 @@ class Status(metaclass=Metaclass_Status):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.obstacle_status = kwargs.get('obstacle_status', int())
+        self.obstacle_type = kwargs.get('obstacle_type', int())
         self.obstacle_value = kwargs.get('obstacle_value', bool())
         self.obstacle_distance = kwargs.get('obstacle_distance', float())
         self.obstacle_id = kwargs.get('obstacle_id', str())
@@ -117,6 +121,8 @@ class Status(metaclass=Metaclass_Status):
             return False
         if self.obstacle_status != other.obstacle_status:
             return False
+        if self.obstacle_type != other.obstacle_type:
+            return False
         if self.obstacle_value != other.obstacle_value:
             return False
         if self.obstacle_distance != other.obstacle_distance:
@@ -144,6 +150,21 @@ class Status(metaclass=Metaclass_Status):
             assert value >= -128 and value < 128, \
                 "The 'obstacle_status' field must be an integer in [-128, 127]"
         self._obstacle_status = value
+
+    @builtins.property
+    def obstacle_type(self):
+        """Message field 'obstacle_type'."""
+        return self._obstacle_type
+
+    @obstacle_type.setter
+    def obstacle_type(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'obstacle_type' field must be of type 'int'"
+            assert value >= -128 and value < 128, \
+                "The 'obstacle_type' field must be an integer in [-128, 127]"
+        self._obstacle_type = value
 
     @builtins.property
     def obstacle_value(self):

@@ -6,16 +6,22 @@ ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	sub_odom_ = this->create_subscription<OdomMSG>("/odom", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
 
 	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drive_callback ,this ,std::placeholders::_1));
+	sub_detect_ = this->create_subscription<DetectMSG>("/drive/object_detect", 1, std::bind(&ObsDetection::detect_callback ,this ,std::placeholders::_1));
 	cb_group_status_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 	rclcpp::PublisherOptions pub_status_options;
 	pub_status_options.callback_group = cb_group_status_;
 	pub_status_ = this->create_publisher<StatusMSG>("/drive/obstacle/status", 1,pub_status_options);
 }
 
+void ObsDetection::detect_callback(const std::shared_ptr<DetectMSG> detect)
+{
+
+}
 void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 {
 	resutlt_distance gps_distance;
 	CalcDistance calc;
+
 	int lp;
 	double tm_x,tm_y;
 	if(drive->code.compare(std::string("arrive"))==0)
@@ -24,6 +30,7 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 		memset(area_width_l,0,sizeof(area_width_l));
 		memset(area_width_r,0,sizeof(area_width_r));
 		memset(area_height,0,sizeof(area_height));
+		//printf("detection_range SIZE=%ld,%f,%f\n\n", drive->end_node.detection_range.size(),drive->end_node.detection_range[0].offset,drive->end_node.detection_range[2].offset);
 		if(drive->end_node.kind.compare(std::string("waiting"))==0)
 		{
 			area_status=1;
@@ -237,7 +244,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	{
 		//	area_status=0;
 	}
-	/**/
+	/*
 	detect_area[detect_arealen/2][detect_arealen/2]=8;
 	printf("\e[1;1H\e[2J");
 	for(int i=0;i<4;i++)
@@ -253,5 +260,5 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		printf("\n");
 	}
 	printf("\n\n\n");
-	/**/
+	*/
 }

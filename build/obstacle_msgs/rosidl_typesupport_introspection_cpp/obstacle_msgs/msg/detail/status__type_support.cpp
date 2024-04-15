@@ -37,7 +37,7 @@ void Status_fini_function(void * message_memory)
   typed_message->~Status();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Status_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Status_message_member_array[5] = {
   {
     "obstacle_status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
@@ -47,6 +47,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Status_messag
     0,  // array size
     false,  // is upper bound
     offsetof(obstacle_msgs::msg::Status, obstacle_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "obstacle_type",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT8,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(obstacle_msgs::msg::Status, obstacle_type),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -111,7 +128,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Status_messag
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Status_message_members = {
   "obstacle_msgs::msg",  // message namespace
   "Status",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(obstacle_msgs::msg::Status),
   Status_message_member_array,  // message members
   Status_init_function,  // function to initialize message memory (memory has to be allocated)

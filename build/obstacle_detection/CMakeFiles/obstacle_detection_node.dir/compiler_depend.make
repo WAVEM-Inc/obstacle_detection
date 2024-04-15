@@ -379,6 +379,7 @@ CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: /home/nuc-bt/Downloads/te
   /usr/include/linux/falloc.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/malloc.h \
   /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/signal.h \
@@ -868,12 +869,24 @@ CMakeFiles/obstacle_detection_node.dir/src/main.cpp.o: /home/nuc-bt/Downloads/te
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__builder.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/nav_sat_fix.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__struct.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_status__struct.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__builder.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_status__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detected_object.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__builder.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__traits.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/area.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/detail/area__struct.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/detail/area__builder.hpp \
@@ -2750,6 +2763,7 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: /home/nuc-b
   /usr/include/linux/falloc.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/malloc.h \
   /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/signal.h \
@@ -3239,12 +3253,24 @@ CMakeFiles/obstacle_detection_node.dir/src/obstacle_detection.cpp.o: /home/nuc-b
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__builder.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/laser_scan__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/nav_sat_fix.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__struct.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_status__struct.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__builder.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_status__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detected_object.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__struct.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__builder.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__traits.hpp \
+  /home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__traits.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/area.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/detail/area__struct.hpp \
   /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/detail/area__builder.hpp \
@@ -5153,21 +5179,23 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/srs/srs.hpp:
 
-/usr/include/boost/mpl/plus.hpp:
+/usr/include/boost/geometry/geometries/multi_polygon.hpp:
 
-/usr/include/boost/geometry/index/detail/algorithms/intersection_content.hpp:
+/usr/include/boost/geometry/algorithms/union.hpp:
 
-/usr/include/boost/mpl/vector/aux_/iterator.hpp:
+/usr/include/boost/geometry/algorithms/remove_spikes.hpp:
 
-/usr/include/boost/mpl/vector/aux_/vector0.hpp:
+/usr/include/boost/geometry/algorithms/detail/relation/interface.hpp:
 
-/usr/include/boost/mpl/joint_view.hpp:
+/usr/include/boost/geometry/algorithms/relation.hpp:
 
-/usr/include/boost/mpl/back_fwd.hpp:
+/usr/include/boost/geometry/algorithms/detail/overlaps/implementation.hpp:
 
-/usr/include/boost/mpl/next.hpp:
+/usr/include/boost/geometry/algorithms/overlaps.hpp:
 
-/usr/include/boost/geometry/policies/robustness/get_rescale_policy.hpp:
+/usr/include/boost/geometry/algorithms/num_geometries.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/is_valid/box.hpp:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
@@ -5182,8 +5210,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp:
 
 /usr/include/boost/mpl/limits/set.hpp:
-
-/usr/include/boost/mpl/aux_/fold_impl.hpp:
 
 /usr/include/c++/11/bits/move.h:
 
@@ -5327,8 +5353,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/less.hpp:
 
-/usr/include/boost/mpl/vector/aux_/push_front.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/assign_values.hpp:
@@ -5375,6 +5399,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
 
+/usr/include/boost/mpl/next.hpp:
+
+/usr/include/boost/geometry/policies/robustness/get_rescale_policy.hpp:
+
 /usr/include/boost/mpl/aux_/config/compiler.hpp:
 
 /usr/include/boost/mpl/push_back.hpp:
@@ -5399,8 +5427,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/mpl/insert.hpp:
 
-/usr/include/boost/geometry/algorithms/union.hpp:
-
 /usr/include/boost/mpl/iterator_tags.hpp:
 
 /usr/include/boost/geometry/strategies/geographic/distance_cross_track_box_box.hpp:
@@ -5412,10 +5438,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/numeric_op.hpp:
 
 /usr/include/boost/mpl/aux_/comparison_op.hpp:
-
-/usr/include/boost/mpl/vector/aux_/item.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
 
 /usr/include/boost/type_traits/is_floating_point.hpp:
 
@@ -5445,8 +5467,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/type_traits/intrinsics.hpp:
 
-/usr/include/c++/11/pstl/glue_memory_defs.h:
-
 /usr/include/boost/type_traits/is_base_of.hpp:
 
 /usr/include/boost/range/category.hpp:
@@ -5454,10 +5474,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/core/tag_cast.hpp:
 
 /usr/include/boost/container/detail/alloc_helpers.hpp:
-
-/usr/include/boost/type_traits/is_base_and_derived.hpp:
-
-/usr/include/boost/geometry/core/coordinate_type.hpp:
 
 /usr/include/boost/geometry/core/coordinate_system.hpp:
 
@@ -5499,14 +5515,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/type_traits/has_trivial_copy.hpp:
 
-/usr/include/boost/preprocessor/tuple/rem.hpp:
-
-/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
-
-/usr/include/boost/mpl/set/aux_/preprocessed/plain/set10.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/overlay/assign_parents.hpp:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
 /usr/include/boost/geometry/core/point_type.hpp:
@@ -5542,10 +5550,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/long_fwd.hpp:
 
 /usr/include/boost/preprocessor/logical/and.hpp:
-
-/usr/include/boost/mpl/pop_back_fwd.hpp:
-
-/usr/include/boost/mpl/set/aux_/key_type_impl.hpp:
 
 /usr/include/boost/range/detail/extract_optional_type.hpp:
 
@@ -5629,8 +5633,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/numeric/conversion/bounds.hpp:
 
-/usr/include/boost/mpl/aux_/config/intel.hpp:
-
 /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
 
 /usr/include/boost/mpl/not.hpp:
@@ -5701,8 +5703,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /home/nuc-bt/kec_ws/src/drive/gps_navigation/install/route_msgs/include/route_msgs/route_msgs/msg/detail/detection_range__struct.hpp:
 
-/usr/include/boost/geometry/algorithms/remove_spikes.hpp:
-
 /usr/include/boost/preprocessor/tuple/eat.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp:
@@ -5741,7 +5741,57 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_cpp/obstacle_msgs/msg/area.hpp:
 
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__traits.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
+
+/usr/include/boost/geometry/strategies/intersection_strategies.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__traits.hpp:
+
+/usr/include/boost/mpl/aux_/config/intel.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__traits.hpp:
+
+/usr/include/c++/11/bits/std_mutex.h:
+
+/usr/include/boost/geometry/core/coordinate_type.hpp:
+
+/usr/include/boost/type_traits/is_base_and_derived.hpp:
+
+/usr/include/c++/11/pstl/glue_memory_defs.h:
+
+/usr/include/boost/preprocessor/list/fold_left.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_objects__struct.hpp:
+
+/usr/include/boost/algorithm/minmax.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__struct.hpp:
+
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/nav_sat_fix.hpp:
+
+/usr/include/boost/preprocessor/tuple/rem.hpp:
+
+/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
+
+/usr/include/boost/mpl/set/aux_/preprocessed/plain/set10.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/overlay/assign_parents.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
+
+/opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
+
+/usr/include/boost/type_traits/is_scalar.hpp:
+
+/usr/include/boost/iterator/filter_iterator.hpp:
+
+/usr/include/boost/type_traits/copy_cv_ref.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
+
+/usr/include/boost/algorithm/string/std/slist_traits.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
 
@@ -5760,8 +5810,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
 
 /usr/include/boost/preprocessor/inc.hpp:
-
-/usr/include/boost/geometry/algorithms/num_geometries.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result.hpp:
 
@@ -5830,10 +5878,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/algorithms/detail/relate/interface.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
-
-/usr/include/boost/mpl/vector/aux_/front.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/parameter_client.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
 
@@ -6055,6 +6099,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/move/detail/meta_utils_core.hpp:
 
+/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:
+
 /usr/include/boost/mpl/size_fwd.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
@@ -6070,6 +6116,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h:
 
 /usr/include/boost/mpl/aux_/config/typeof.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/envelope/box.hpp:
+
+/usr/include/boost/geometry/strategies/spherical/expand_segment.hpp:
 
 /opt/ros/humble/include/rmw/rmw/message_sequence.h:
 
@@ -6114,14 +6164,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/type_traits/type_with_alignment.hpp:
 
 /usr/include/c++/11/bits/istream.tcc:
-
-/usr/include/boost/mpl/vector/aux_/pop_front.hpp:
-
-/opt/ros/humble/include/rcl/rcl/service.h:
-
-/usr/include/boost/container/container_fwd.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/calculate_null.hpp:
 
 /usr/include/c++/11/csignal:
 
@@ -6237,6 +6279,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
+
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:
 
 /usr/include/c++/11/cstdint:
@@ -6278,10 +6322,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/aux_/config/nttp.hpp:
 
 /usr/include/c++/11/exception:
-
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
-/usr/include/boost/geometry/formulas/vertex_latitude.hpp:
 
 /usr/include/boost/preprocessor/arithmetic/sub.hpp:
 
@@ -6352,6 +6392,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/index/detail/rtree/options.hpp:
 
 /usr/include/boost/type_traits/is_same.hpp:
+
+/usr/include/boost/mpl/aux_/fold_impl.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detected_object.hpp:
 
 /usr/include/boost/mpl/list/aux_/preprocessed/plain/list10.hpp:
 
@@ -6443,6 +6487,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__builder.hpp:
+
 /usr/include/boost/type_traits/has_trivial_destructor.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
@@ -6480,6 +6528,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/vector/vector20.hpp:
 
 /usr/include/boost/mpl/bool.hpp:
+
+/usr/include/boost/geometry/algorithms/make.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/overlay/intersection_box_box.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -6567,6 +6619,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
 
+/usr/include/boost/mpl/vector/aux_/at.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:
 
 /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
@@ -6578,8 +6634,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/boost/geometry/algorithms/relation.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
@@ -6610,10 +6664,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/features.h:
 
 /usr/include/boost/geometry/core/radian_access.hpp:
-
-/usr/include/boost/range/rbegin.hpp:
-
-/usr/include/boost/geometry/iterators/detail/segment_iterator/iterator_type.hpp:
 
 /usr/include/boost/variant/variant.hpp:
 
@@ -6694,10 +6744,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/index/detail/varray_detail.hpp:
 
 /usr/include/stdio.h:
-
-/usr/include/boost/preprocessor/cat.hpp:
-
-/usr/include/boost/geometry/index/detail/rtree/adaptors.hpp:
 
 /usr/include/boost/preprocessor/facilities/identity.hpp:
 
@@ -6783,6 +6829,8 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/utility/result_of.hpp:
 
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object__builder.hpp:
+
 /usr/include/boost/geometry/index/detail/algorithms/content.hpp:
 
 /usr/include/c++/11/bits/codecvt.h:
@@ -6808,12 +6856,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:
 
 /usr/include/stdlib.h:
-
-/usr/include/c++/11/iosfwd:
-
-/usr/include/boost/mpl/vector/aux_/back.hpp:
-
-/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/overlay/needs_self_turns.hpp:
 
@@ -6919,15 +6961,9 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
-
-/usr/include/boost/algorithm/string/detail/find_format.hpp:
-
-/usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
@@ -6955,10 +6991,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/c++/11/bits/specfun.h:
 
-/usr/include/boost/range/detail/range_return.hpp:
-
-/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
-
 /usr/include/boost/type_traits/remove_reference.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/get_max_size.hpp:
@@ -6972,6 +7004,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/stdint.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/malloc.h:
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
 
@@ -7035,6 +7071,12 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/numeric/conversion/detail/converter.hpp:
 
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
+
+/usr/include/c++/11/iosfwd:
+
+/usr/include/boost/mpl/vector/aux_/back.hpp:
+
 /usr/include/c++/11/bits/locale_facets.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
@@ -7042,10 +7084,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /opt/ros/humble/include/rmw/rmw/get_topic_names_and_types.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/typesupport_helpers.hpp:
-
-/usr/include/boost/variant/detail/variant_io.hpp:
-
-/usr/include/boost/algorithm/string/detail/finder.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
 
@@ -7139,7 +7177,9 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/c++/11/math.h:
 
-/usr/include/c++/11/bits/std_mutex.h:
+/usr/include/boost/preprocessor/cat.hpp:
+
+/usr/include/boost/geometry/index/detail/rtree/adaptors.hpp:
 
 /usr/include/boost/geometry/core/point_order.hpp:
 
@@ -7169,6 +7209,12 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/algorithms/detail/expand/point.hpp:
 
+/usr/include/boost/geometry/formulas/vertex_latitude.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/boost/mpl/vector/aux_/iterator.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
 /usr/include/boost/geometry/strategies/cartesian/envelope_multipoint.hpp:
@@ -7176,6 +7222,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
 /usr/include/boost/geometry/algorithms/detail/envelope/interface.hpp:
+
+/usr/include/boost/mpl/set/aux_/clear_impl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
 
@@ -7295,12 +7345,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
-/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/nav_sat_fix__builder.hpp:
-
-/usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
-
-/usr/include/boost/type_traits/copy_cv_ref.hpp:
-
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
 
 /usr/include/boost/type_traits/function_traits.hpp:
@@ -7321,6 +7365,14 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
 
+/opt/ros/humble/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
+
+/usr/include/boost/mpl/vector/aux_/item.hpp:
+
+/usr/include/boost/algorithm/string/detail/finder.hpp:
+
+/usr/include/boost/variant/detail/variant_io.hpp:
+
 /opt/ros/humble/include/rmw/rmw/domain_id.h:
 
 /opt/ros/humble/include/rmw/rmw/localhost.h:
@@ -7338,6 +7390,12 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /opt/ros/humble/include/rmw/rmw/visibility_control.h:
 
 /opt/ros/humble/include/rmw/rmw/macros.h:
+
+/usr/include/boost/range/detail/range_return.hpp:
+
+/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp:
 
 /opt/ros/humble/include/rmw/rmw/ret_types.h:
 
@@ -7395,10 +7453,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/geometries/box.hpp:
 
-/usr/include/boost/geometry/algorithms/detail/overlay/intersection_box_box.hpp:
-
-/usr/include/boost/geometry/algorithms/make.hpp:
-
 /usr/include/boost/geometry/strategies/distance.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h:
@@ -7415,10 +7469,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/boost/mpl/vector/aux_/at.hpp:
-
 /usr/include/boost/move/iterator.hpp:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:
@@ -7429,9 +7479,17 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/set_parameters.hpp:
 
+/usr/include/boost/geometry/algorithms/line_interpolate.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/params.hpp:
+
+/usr/include/boost/variant/detail/apply_visitor_unary.hpp:
+
 /usr/include/boost/qvm/mat.hpp:
 
 /usr/include/boost/geometry/strategies/agnostic/point_in_box_by_side.hpp:
+
+/home/nuc-bt/kec_ws/src/rms/rms/install/ktp_data_msgs/include/ktp_data_msgs/ktp_data_msgs/msg/detail/detected_object_size__struct.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp:
 
@@ -7481,6 +7539,18 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /opt/ros/humble/include/rcl/rcl/domain_id.h:
 
+/opt/ros/humble/include/rcl/rcl/service.h:
+
+/usr/include/boost/mpl/vector/aux_/pop_front.hpp:
+
+/usr/include/boost/container/container_fwd.hpp:
+
+/usr/include/c++/11/ext/atomicity.h:
+
+/usr/include/boost/algorithm/string/detail/find_format.hpp:
+
+/usr/include/boost/geometry/algorithms/detail/calculate_null.hpp:
+
 /usr/include/boost/preprocessor/config/config.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/ring_buffer_implementation.hpp:
@@ -7506,8 +7576,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/config/pragma_message.hpp:
 
 /usr/include/boost/type_traits/has_nothrow_constructor.hpp:
-
-/usr/include/boost/preprocessor/list/fold_left.hpp:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
@@ -7703,16 +7771,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/geometry/algorithms/detail/buffer/buffer_box.hpp:
 
-/opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/boost/mpl/set/aux_/clear_impl.hpp:
-
-/usr/include/boost/type_traits/is_scalar.hpp:
-
-/usr/include/boost/iterator/filter_iterator.hpp:
-
 /usr/include/signal.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/waitable.hpp:
@@ -7740,6 +7798,10 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/util/promote_integral.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_map.hpp:
+
+/usr/include/boost/type_traits/is_fundamental.hpp:
+
+/usr/include/boost/mpl/distance_fwd.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/overlay/copy_segment_point.hpp:
 
@@ -7825,11 +7887,29 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/move/detail/move_helpers.hpp:
 
-/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:
+/opt/ros/humble/include/rclcpp/rclcpp/parameter_client.hpp:
 
-/usr/include/boost/geometry/strategies/spherical/expand_segment.hpp:
+/usr/include/boost/mpl/vector/aux_/front.hpp:
 
-/usr/include/boost/geometry/algorithms/detail/envelope/box.hpp:
+/usr/include/boost/mpl/vector/aux_/push_front.hpp:
+
+/usr/include/boost/mpl/pop_back_fwd.hpp:
+
+/usr/include/boost/mpl/set/aux_/key_type_impl.hpp:
+
+/usr/include/boost/mpl/back_fwd.hpp:
+
+/usr/include/boost/mpl/vector/aux_/vector0.hpp:
+
+/usr/include/boost/geometry/iterators/detail/segment_iterator/iterator_type.hpp:
+
+/usr/include/boost/range/rbegin.hpp:
+
+/usr/include/boost/mpl/joint_view.hpp:
+
+/usr/include/boost/mpl/plus.hpp:
+
+/usr/include/boost/geometry/index/detail/algorithms/intersection_content.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/plus.hpp:
 
@@ -7870,10 +7950,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/mpl/negate.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/disjoint/interface.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
-
-/usr/include/boost/geometry/strategies/intersection_strategies.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp:
 
@@ -8333,12 +8409,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/range/algorithm/reverse.hpp:
 
-/usr/include/boost/mpl/distance_fwd.hpp:
-
-/usr/include/boost/type_traits/is_fundamental.hpp:
-
-/usr/include/boost/algorithm/string/std/slist_traits.hpp:
-
 /usr/include/boost/call_traits.hpp:
 
 /usr/include/boost/mpl/limits/vector.hpp:
@@ -8356,12 +8426,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
 
 /usr/include/boost/geometry/strategies/buffer.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessor/params.hpp:
-
-/usr/include/boost/variant/detail/apply_visitor_unary.hpp:
-
-/usr/include/boost/geometry/algorithms/line_interpolate.hpp:
 
 /usr/include/boost/mpl/min_max.hpp:
 
@@ -8680,8 +8744,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/boost/variant/detail/initializer.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/overlaps/implementation.hpp:
 
 /usr/include/boost/utility.hpp:
 
@@ -9029,8 +9091,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 
 /usr/include/boost/mpl/set/aux_/tag.hpp:
 
-/usr/include/boost/geometry/algorithms/overlaps.hpp:
-
 /usr/include/boost/mpl/aux_/overload_names.hpp:
 
 /usr/include/boost/function_types/config/cc_names.hpp:
@@ -9288,8 +9348,6 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/strategies/geographic/distance_cross_track.hpp:
 
 /usr/include/boost/variant/detail/cast_storage.hpp:
-
-/usr/include/boost/algorithm/minmax.hpp:
 
 /usr/include/boost/geometry/strategies/geographic/intersection.hpp:
 
@@ -9872,9 +9930,3 @@ CMakeFiles/obstacle_detection_node.dir/src/quaternion/quaternion.cpp.o: /home/nu
 /usr/include/boost/geometry/algorithms/detail/is_valid/debug_complement_graph.hpp:
 
 /usr/include/boost/geometry/algorithms/detail/is_valid/multipolygon.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/is_valid/box.hpp:
-
-/usr/include/boost/geometry/algorithms/detail/relation/interface.hpp:
-
-/usr/include/boost/geometry/geometries/multi_polygon.hpp:

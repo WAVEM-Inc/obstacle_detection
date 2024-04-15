@@ -62,6 +62,15 @@ bool obstacle_msgs__msg__status__convert_from_py(PyObject * _pymsg, void * _ros_
     ros_message->obstacle_status = (int8_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // obstacle_type
+    PyObject * field = PyObject_GetAttrString(_pymsg, "obstacle_type");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->obstacle_type = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
   {  // obstacle_value
     PyObject * field = PyObject_GetAttrString(_pymsg, "obstacle_value");
     if (!field) {
@@ -122,6 +131,17 @@ PyObject * obstacle_msgs__msg__status__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLong(ros_message->obstacle_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "obstacle_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // obstacle_type
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->obstacle_type);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "obstacle_type", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

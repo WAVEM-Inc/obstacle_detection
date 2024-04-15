@@ -25,6 +25,7 @@ extern "C"
 typedef struct obstacle_msgs__msg__Status
 {
   int8_t obstacle_status;
+  int8_t obstacle_type;
   bool obstacle_value;
   double obstacle_distance;
   rosidl_runtime_c__String obstacle_id;
