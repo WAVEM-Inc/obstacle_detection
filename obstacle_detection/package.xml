@@ -12,6 +12,7 @@
   <depend>route_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
+  <depend>ktp_data_msgs</depend>
   <depend>obstacle_msgs</depend>
   <depend>rclcpp</depend>
 
