@@ -1,1 +1,0 @@
-/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

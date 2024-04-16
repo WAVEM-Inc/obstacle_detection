@@ -1,7 +1,0 @@
-{
-  "package_name": "obstacle_msgs",
-  "non_idl_tuples": [
-    "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs:msg/Status.msg",
-    "/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs:msg/Area.msg"
-  ]
-}

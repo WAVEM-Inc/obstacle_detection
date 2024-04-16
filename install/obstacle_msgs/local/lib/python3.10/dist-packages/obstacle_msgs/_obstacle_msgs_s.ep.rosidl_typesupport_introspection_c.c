@@ -1,1 +1,0 @@
-/home/nuc-bt/Downloads/test_ws/obstacle_detection/build/obstacle_msgs/rosidl_generator_py/obstacle_msgs/_obstacle_msgs_s.ep.rosidl_typesupport_introspection_c.c

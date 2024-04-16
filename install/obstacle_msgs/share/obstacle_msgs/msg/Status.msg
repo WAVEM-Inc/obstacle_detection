@@ -1,1 +1,0 @@
-/home/nuc-bt/Downloads/test_ws/obstacle_detection/obstacle_msgs/msg/Status.msg
