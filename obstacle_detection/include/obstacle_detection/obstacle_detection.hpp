@@ -1,11 +1,12 @@
 #ifndef OBS_DETECTION_LISTENER_HPP__
 #define OBS_DETECTION_LISTENER_HPP__
 
-#define DETECT_SIZE 10
+#define DETECT_SIZE 20
 #define DETECT_RES 10
-#define CAR_WIDTH 1.2
+#define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
-#define OBS_MOVE_DIST 5
+#define OBS_MOVE_DIST 10
+#define CAR_OFFSET 2.7
 
 #include <iostream>
 #include <fstream>
@@ -38,6 +39,8 @@ class ObsDetection : public rclcpp::Node{
 	private :
 		rclcpp::CallbackGroup::SharedPtr cb_group_status_;
 		rclcpp::Publisher<StatusMSG>::SharedPtr pub_status_;
+		rclcpp::CallbackGroup::SharedPtr cb_group_coop_;
+		rclcpp::Publisher<StringMSG>::SharedPtr pub_coop_;
 
 		rclcpp::Subscription<OdomMSG>::SharedPtr sub_odom_;
 		rclcpp::Subscription<GpsMSG>::SharedPtr sub_gps_;
@@ -59,6 +62,7 @@ class ObsDetection : public rclcpp::Node{
 		double area_lat_1, area_long_1, area_lat_2,area_long_2;
 		double obs_dist;
 		int area_status=0;
+		int area_status_val=0;
 		bool detect_val;
 		double node_lat, node_long, route_angle;
 		double node_offset[4], area_width_l[4],area_width_r[4], area_height[4];
@@ -66,6 +70,11 @@ class ObsDetection : public rclcpp::Node{
 		double odom_vel_x=0;
 		double  robot_angle=0;
 		double  global_angle=0;
+		double coop_detect_num=0;
+		double coop_detect_axis[512];
+		bool coop_flag=false;
+		bool coop_pub_flag=false;
+		std::string coop_detect_id[256];
 
 		//gps callback
 		double robot_lat,robot_long;

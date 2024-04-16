@@ -8,8 +8,6 @@ module obstacle_msgs {
     struct Status {
       int8 obstacle_status;
 
-      int8 obstacle_type;
-
       boolean obstacle_value;
 
       double obstacle_distance;

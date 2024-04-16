@@ -69,32 +69,16 @@ private:
   ::obstacle_msgs::msg::Status msg_;
 };
 
-class Init_Status_obstacle_type
-{
-public:
-  explicit Init_Status_obstacle_type(::obstacle_msgs::msg::Status & msg)
-  : msg_(msg)
-  {}
-  Init_Status_obstacle_value obstacle_type(::obstacle_msgs::msg::Status::_obstacle_type_type arg)
-  {
-    msg_.obstacle_type = std::move(arg);
-    return Init_Status_obstacle_value(msg_);
-  }
-
-private:
-  ::obstacle_msgs::msg::Status msg_;
-};
-
 class Init_Status_obstacle_status
 {
 public:
   Init_Status_obstacle_status()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Status_obstacle_type obstacle_status(::obstacle_msgs::msg::Status::_obstacle_status_type arg)
+  Init_Status_obstacle_value obstacle_status(::obstacle_msgs::msg::Status::_obstacle_status_type arg)
   {
     msg_.obstacle_status = std::move(arg);
-    return Init_Status_obstacle_type(msg_);
+    return Init_Status_obstacle_value(msg_);
   }
 
 private:

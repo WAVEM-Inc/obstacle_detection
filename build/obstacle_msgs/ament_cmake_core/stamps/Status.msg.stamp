@@ -1,5 +1,4 @@
 int8	obstacle_status
-int8	obstacle_type
 bool	obstacle_value
 float64	obstacle_distance
 string obstacle_id

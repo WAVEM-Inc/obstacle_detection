@@ -32,13 +32,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: obstacle_type
-  {
-    out << "obstacle_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.obstacle_type, out);
-    out << ", ";
-  }
-
   // member: obstacle_value
   {
     out << "obstacle_value: ";
@@ -72,16 +65,6 @@ inline void to_block_style_yaml(
     }
     out << "obstacle_status: ";
     rosidl_generator_traits::value_to_yaml(msg.obstacle_status, out);
-    out << "\n";
-  }
-
-  // member: obstacle_type
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "obstacle_type: ";
-    rosidl_generator_traits::value_to_yaml(msg.obstacle_type, out);
     out << "\n";
   }
 

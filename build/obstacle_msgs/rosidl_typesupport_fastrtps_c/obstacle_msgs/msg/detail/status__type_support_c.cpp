@@ -56,11 +56,6 @@ static bool _Status__cdr_serialize(
     cdr << ros_message->obstacle_status;
   }
 
-  // Field name: obstacle_type
-  {
-    cdr << ros_message->obstacle_type;
-  }
-
   // Field name: obstacle_value
   {
     cdr << (ros_message->obstacle_value ? true : false);
@@ -100,11 +95,6 @@ static bool _Status__cdr_deserialize(
   // Field name: obstacle_status
   {
     cdr >> ros_message->obstacle_status;
-  }
-
-  // Field name: obstacle_type
-  {
-    cdr >> ros_message->obstacle_type;
   }
 
   // Field name: obstacle_value
@@ -158,12 +148,6 @@ size_t get_serialized_size_obstacle_msgs__msg__Status(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name obstacle_type
-  {
-    size_t item_size = sizeof(ros_message->obstacle_type);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name obstacle_value
   {
     size_t item_size = sizeof(ros_message->obstacle_value);
@@ -210,13 +194,6 @@ size_t max_serialized_size_obstacle_msgs__msg__Status(
   is_plain = true;
 
   // member: obstacle_status
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: obstacle_type
   {
     size_t array_size = 1;
 

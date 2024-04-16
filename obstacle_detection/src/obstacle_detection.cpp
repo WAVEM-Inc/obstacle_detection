@@ -11,16 +11,37 @@ ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	rclcpp::PublisherOptions pub_status_options;
 	pub_status_options.callback_group = cb_group_status_;
 	pub_status_ = this->create_publisher<StatusMSG>("/drive/obstacle/status", 1,pub_status_options);
+	rclcpp::PublisherOptions pub_coop_options;
+	pub_coop_options.callback_group = cb_group_coop_;
+	pub_coop_ = this->create_publisher<StringMSG>("/drive/obstacle/cooperative", 1,pub_coop_options);
+	memset(coop_detect_axis,0,sizeof(coop_detect_axis));
+	memset(coop_detect_id,0,sizeof(coop_detect_axis));
 }
 
 void ObsDetection::detect_callback(const std::shared_ptr<DetectMSG> detect)
 {
-
+	memset(coop_detect_axis,0,sizeof(coop_detect_axis));
+	memset(coop_detect_id,0,sizeof(coop_detect_axis));
+	coop_detect_num = detect->objects.size();
+	for(int lp=0;lp<coop_detect_num;lp++)
+	{
+		coop_detect_id[lp]=detect->objects[lp].object_id;
+		coop_detect_axis[2*lp]=detect->objects[lp].y; //latitude
+		coop_detect_axis[2*lp+1]=detect->objects[lp].x; //longitude
+	}
+	if(coop_pub_flag)
+	{
+		area_status=2;
+		area_status_val=2;
+		coop_flag=true;
+		coop_pub_flag=false;
+	}
 }
 void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 {
 	resutlt_distance gps_distance;
 	CalcDistance calc;
+	StringMSG coop;
 
 	int lp;
 	double tm_x,tm_y;
@@ -33,10 +54,20 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 		//printf("detection_range SIZE=%ld,%f,%f\n\n", drive->end_node.detection_range.size(),drive->end_node.detection_range[0].offset,drive->end_node.detection_range[2].offset);
 		if(drive->end_node.kind.compare(std::string("waiting"))==0)
 		{
-			area_status=1;
+			if(drive->end_node.detection_range[0].action_code.compare(std::string("cooperative"))==0)
+			{
+				coop_pub_flag=true;
+				coop.data = "START";
+				pub_coop_->publish(coop);
+			}
+			else
+			{
+				area_status=1;
+				area_status_val=1;
+			}
 			node_lat=drive->end_node.position.latitude;
 			node_long=drive->end_node.position.longitude;
-			for(lp =0;lp< 1 ;lp++)
+			for(lp =0;lp< drive->end_node.detection_range.size() ;lp++)
 			{
 				node_offset[lp]=drive->end_node.detection_range[lp].offset;
 				area_width_l[lp] = drive->end_node.detection_range[lp].width_left;
@@ -84,17 +115,15 @@ bool ObsDetection::area_check(double point_x, double point_y, double *check_area
 {
 	int num_crosses=0;
 	int area_num=4;
-	point_x+=DETECT_SIZE;
-	point_y+=DETECT_SIZE;
 	for( int lp=0;lp < area_num;lp++)
 	{
 		int lp_y = (lp+1)%area_num;
-		if (((check_area[lp*2+1] +DETECT_SIZE) > point_y) != ((check_area[lp_y*2+1] +DETECT_SIZE) > point_y)) 
+		if (((check_area[lp*2+1]) > point_y) != ((check_area[lp_y*2+1]) > point_y)) 
 		{
-			double atX=((check_area[lp_y*2] +DETECT_SIZE)- (check_area[lp*2] +DETECT_SIZE)) 
-				* (point_y - (check_area[lp*2+1] +DETECT_SIZE))
-				/ ((check_area[lp_y*2+1] +DETECT_SIZE) - (check_area[lp*2+1] +DETECT_SIZE))
-				+ (check_area[lp*2] +DETECT_SIZE);
+			double atX=((check_area[lp_y*2])- (check_area[lp*2])) 
+				* (point_y - (check_area[lp*2+1]))
+				/ ((check_area[lp_y*2+1]) - (check_area[lp*2+1]))
+				+ (check_area[lp*2]);
 			if( point_x < atX )
 			{
 				num_crosses++;
@@ -111,9 +140,10 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 
 	memset(obs_area,0,sizeof(obs_area));
 	StatusMSG status;
+	StringMSG coop;
 	////tmp value
 	//
-	double node_x, node_y,area_start_x, area_start_y;
+	double node_x, node_y,area_start_x, area_start_y, coop_x,coop_y;
 
 	if(fabs(odom_vel_x >= 0.1))
 	{
@@ -154,22 +184,23 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			area_x4=area_x3+area_height[0]*cos(route_angle);
 			area_y4=area_y3+area_height[0]*sin(route_angle);
 			obs_area[0] =area_x1;
-			obs_area[1] =-area_y1;
+			obs_area[1] =area_y1;
 			obs_area[2] =area_x2;
-			obs_area[3] =-area_y2;
-			obs_area[4] =area_x3;
-			obs_area[5] =-area_y3;
-			obs_area[6] =area_x4;
-			obs_area[7] =-area_y4;
-			break;	
+			obs_area[3] =area_y2;
+			obs_area[4] =area_x4;
+			obs_area[5] =area_y4;
+			obs_area[6] =area_x3;
+			obs_area[7] =area_y3;
+			break;
 		default:
+			area_status=0;
 			robot_angle=0;
 			global_angle=0;
-			area_x1=-(CAR_WIDTH/2+7);
-			area_x2=CAR_WIDTH/2+7;
+			area_x1=-(CAR_WIDTH/2);
+			area_x2=CAR_WIDTH/2;
 			if(odom_vel_x >= 0)
 			{
-				area_y1=-OBS_MOVE_DIST-1;
+				area_y1=-OBS_MOVE_DIST;
 				area_y2=0;
 			}
 			else
@@ -205,44 +236,103 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			}
 		}
 	}
-
 	detect_val=0;
-	obs_dist=DETECT_SIZE*2;
-	for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	obs_dist=DETECT_SIZE;
+
+	if(area_status==2)
 	{
-		for(lp_x=0;lp_x < detect_arealen;lp_x++)
+		for(lp=0;lp<coop_detect_num;lp++)
 		{
-			if(detect_area[lp_x][lp_y] > 0)
+			gps_distance = calc.getDistance(robot_lat, robot_long,coop_detect_axis[2*lp] , coop_detect_axis[2*lp+1],KTM);
+			if((coop_detect_axis[2*lp] - robot_lat) > 0)
 			{
-				if(area_check((double)((lp_x-detect_arealen/2)/DETECT_RES) ,(double)((detect_arealen/2-lp_y)/DETECT_RES),obs_area ) )
+				coop_y=gps_distance.distance_y;
+			}
+			else
+			{
+				coop_y=-gps_distance.distance_y;
+			}
+			if((coop_detect_axis[2*lp+1] - robot_long) > 0)
+			{
+				coop_x=gps_distance.distance_x;
+			}
+			else
+			{
+				coop_x=-gps_distance.distance_x;
+			}
+			if(area_check(coop_x ,coop_y,obs_area ) )
+			{
+				area_status_val=2;
+				detect_val=1;
+				obs_dist=0;
+				status.obstacle_id = coop_detect_id[lp];
+			}
+		}	
+	}
+	if(!detect_val)
+	{
+		for(lp_y=0;lp_y < detect_arealen;lp_y++)
+		{
+			for(lp_x=0;lp_x < detect_arealen;lp_x++)
+			{
+				if(detect_area[lp_x][lp_y] > 0)
 				{
-					detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
-					detect_val=1;
-					if(area_status >= 1)
+					if(area_check((double)((lp_x-detect_arealen/2)/DETECT_RES) ,(double)((detect_arealen/2-lp_y)/DETECT_RES),obs_area ) )
 					{
-						if(obs_dist > sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES)
+						if(area_status > 0)
 						{
-							obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
+							area_status_val=1;
 						}
-					}
-					else
-					{
-						if(obs_dist >  fabs((detect_arealen/2-lp_y)/DETECT_RES))
+						else
 						{
-							obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES);
+							area_status_val=0;
+						}
+						detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
+						detect_val=1;
+						if(area_status >= 1)
+						{
+							/*
+							   if(obs_dist > sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES)
+							   {
+							   obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
+							   }
+							   */
+							obs_dist = 0;
+						}
+						else
+						{
+							if(obs_dist >  fabs((double)(detect_arealen/2-lp_y)/DETECT_RES-CAR_OFFSET))
+							{
+								obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES)-CAR_OFFSET;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	status.obstacle_status = area_status;
+	if(!detect_val)
+	{
+		obs_dist = 0;
+	}
+	status.obstacle_status = area_status_val;
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	pub_status_->publish(status);
-	if((area_status > 0) && detect_val==0 )
+	if((area_status > 0 ) && detect_val==0 )
+	{	
+		if(coop_flag )
+		{
+			coop.data = "STOP";
+			pub_coop_->publish(coop);
+		}
+		coop_flag=false;
+		area_status=0;
+		area_status_val=0;
+	}
+	if(coop_flag && detect_val ==1)
 	{
-		//	area_status=0;
+		area_status_val=2;
 	}
 	/*
 	detect_area[detect_arealen/2][detect_arealen/2]=8;

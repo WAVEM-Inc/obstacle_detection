@@ -22,7 +22,6 @@ obstacle_msgs__msg__Status__init(obstacle_msgs__msg__Status * msg)
     return false;
   }
   // obstacle_status
-  // obstacle_type
   // obstacle_value
   // obstacle_distance
   // obstacle_id
@@ -40,7 +39,6 @@ obstacle_msgs__msg__Status__fini(obstacle_msgs__msg__Status * msg)
     return;
   }
   // obstacle_status
-  // obstacle_type
   // obstacle_value
   // obstacle_distance
   // obstacle_id
@@ -55,10 +53,6 @@ obstacle_msgs__msg__Status__are_equal(const obstacle_msgs__msg__Status * lhs, co
   }
   // obstacle_status
   if (lhs->obstacle_status != rhs->obstacle_status) {
-    return false;
-  }
-  // obstacle_type
-  if (lhs->obstacle_type != rhs->obstacle_type) {
     return false;
   }
   // obstacle_value
@@ -88,8 +82,6 @@ obstacle_msgs__msg__Status__copy(
   }
   // obstacle_status
   output->obstacle_status = input->obstacle_status;
-  // obstacle_type
-  output->obstacle_type = input->obstacle_type;
   // obstacle_value
   output->obstacle_value = input->obstacle_value;
   // obstacle_distance
