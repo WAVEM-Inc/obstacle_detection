@@ -3,7 +3,7 @@
 ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	sub_scan_ = this->create_subscription<LidarMSG>("/scan/multi", 1, std::bind(&ObsDetection::scan_callback ,this ,std::placeholders::_1));
 	sub_gps_ = this->create_subscription<GpsMSG>("/sensor/ublox/fix", 1, std::bind(&ObsDetection::gps_callback ,this ,std::placeholders::_1));
-	sub_odom_ = this->create_subscription<OdomMSG>("/odom", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
+	sub_odom_ = this->create_subscription<OdomMSG>("/drive/odom/origin", 1, std::bind(&ObsDetection::odom_callback ,this ,std::placeholders::_1));
 
 	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drive_callback ,this ,std::placeholders::_1));
 	sub_detect_ = this->create_subscription<DetectMSG>("/drive/object_detect", 1, std::bind(&ObsDetection::detect_callback ,this ,std::placeholders::_1));
@@ -201,12 +201,14 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			if(odom_vel_x >= 0)
 			{
 				area_y1=-OBS_MOVE_DIST;
-				area_y2=0;
+				area_y2=-2.7;
+				car_offset=2.7;
 			}
 			else
 			{
-				area_y1=0;
+				area_y1=0.8;
 				area_y2=OBS_MOVE_DIST;
+				car_offset=0.8;
 			}
 			obs_area[0] =area_x1;
 			obs_area[1] =-area_y1;
@@ -301,9 +303,9 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 						}
 						else
 						{
-							if(obs_dist >  fabs((double)(detect_arealen/2-lp_y)/DETECT_RES-CAR_OFFSET))
+							if(obs_dist >  fabs((double)(detect_arealen/2-lp_y)/DETECT_RES-car_offset))
 							{
-								obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES)-CAR_OFFSET;
+								obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES)-car_offset;
 							}
 						}
 					}

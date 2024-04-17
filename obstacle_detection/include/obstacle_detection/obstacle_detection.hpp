@@ -1,11 +1,11 @@
 #ifndef OBS_DETECTION_LISTENER_HPP__
 #define OBS_DETECTION_LISTENER_HPP__
 
-#define DETECT_SIZE 20
+#define DETECT_SIZE 40
 #define DETECT_RES 10
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
-#define OBS_MOVE_DIST 10
+#define OBS_MOVE_DIST 5.5
 #define CAR_OFFSET 2.7
 
 #include <iostream>
@@ -61,6 +61,7 @@ class ObsDetection : public rclcpp::Node{
 		double obstacle_distance, obstacle_length;
 		double area_lat_1, area_long_1, area_lat_2,area_long_2;
 		double obs_dist;
+		double car_offset=0;
 		int area_status=0;
 		int area_status_val=0;
 		bool detect_val;
