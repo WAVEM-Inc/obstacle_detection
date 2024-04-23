@@ -137,61 +137,66 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	resutlt_distance gps_distance;
 	CalcDistance calc;
 	int lp,lp_x,lp_y;
-
+	log_time= clock();
 	memset(obs_area,0,sizeof(obs_area));
 	StatusMSG status;
 	StringMSG coop;
 	////tmp value
 	//
 	double node_x, node_y,area_start_x, area_start_y, coop_x,coop_y;
-
-	if(fabs(odom_vel_x >= 0.1))
-	{
-		area_status=0;
-	}
+	/*
+	   if(fabs(odom_vel_x) >= 0.08)
+	   {
+	   area_status=0;
+	   }
+	   */
 	switch(area_status)
 	{
 		case 1:
 		case 2:
-			robot_angle=qua_.getterYaw();
-			global_angle=-90*M_PI/180;
-			gps_distance = calc.getDistance(robot_lat, robot_long, node_lat, node_long,KTM);
-			if((node_lat - robot_lat) > 0)
+			if(fabs(odom_vel_x) < 0.05)
 			{
-				node_y=gps_distance.distance_y;
-			}
-			else
-			{
-				node_y=-gps_distance.distance_y;
-			}
-			if((node_long - robot_long) > 0)
-			{
-				node_x=gps_distance.distance_x;
-			}
-			else
-			{
-				node_x=-gps_distance.distance_x;
-			}
-			area_start_x=node_x+node_offset[0]*cos(route_angle);
-			area_start_y=node_y+node_offset[0]*sin(route_angle);
+				robot_angle=qua_.getterYaw();
+				global_angle=0;
+				//global_angle=(0)*M_PI/180;
+				gps_distance = calc.getDistance(robot_lat, robot_long, node_lat, node_long,KTM);
+				if((node_lat - robot_lat) > 0)
+				{
+					node_y=gps_distance.distance_y;
+				}
+				else
+				{
+					node_y=-gps_distance.distance_y;
+				}
+				if((node_long - robot_long) > 0)
+				{
+					node_x=gps_distance.distance_x;
+				}
+				else
+				{
+					node_x=-gps_distance.distance_x;
+				}
+				area_start_x=-node_x+(node_offset[0]+2.4)*cos(route_angle);
+				area_start_y=-node_y+(node_offset[0]+2.4)*sin(route_angle);
 
-			area_x1=area_start_x+area_width_r[0]*cos(route_angle+90*M_PI/180);
-			area_y1=area_start_y+area_width_r[0]*sin(route_angle+90*M_PI/180);
-			area_x2=area_x1+area_height[0]*cos(route_angle);
-			area_y2=area_y1+area_height[0]*sin(route_angle);
-			area_x3=area_start_x+area_width_l[0]*cos(route_angle-90*M_PI/180);
-			area_y3=area_start_y+area_width_l[0]*sin(route_angle-90*M_PI/180);
-			area_x4=area_x3+area_height[0]*cos(route_angle);
-			area_y4=area_y3+area_height[0]*sin(route_angle);
-			obs_area[0] =area_x1;
-			obs_area[1] =area_y1;
-			obs_area[2] =area_x2;
-			obs_area[3] =area_y2;
-			obs_area[4] =area_x4;
-			obs_area[5] =area_y4;
-			obs_area[6] =area_x3;
-			obs_area[7] =area_y3;
-			break;
+				area_x1=area_start_x+area_width_l[0]*cos(route_angle+90*M_PI/180);
+				area_y1=area_start_y+area_width_l[0]*sin(route_angle+90*M_PI/180);
+				area_x2=area_x1+area_height[0]*cos(route_angle);
+				area_y2=area_y1+area_height[0]*sin(route_angle);
+				area_x3=area_start_x+area_width_r[0]*cos(route_angle-90*M_PI/180);
+				area_y3=area_start_y+area_width_r[0]*sin(route_angle-90*M_PI/180);
+				area_x4=area_x3+area_height[0]*cos(route_angle);
+				area_y4=area_y3+area_height[0]*sin(route_angle);
+				obs_area[0] =area_x1;
+				obs_area[1] =area_y1;
+				obs_area[2] =area_x2;
+				obs_area[3] =area_y2;
+				obs_area[4] =area_x4;
+				obs_area[5] =area_y4;
+				obs_area[6] =area_x3;
+				obs_area[7] =area_y3;
+				break;
+			}
 		default:
 			area_status=0;
 			robot_angle=0;
@@ -290,7 +295,14 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							area_status_val=0;
 						}
 						detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
-						detect_val=1;
+						if(area_status==0)
+						{
+							detect_val=true;
+						}
+						else
+						{
+							detect_val=false;
+						}
 						if(area_status >= 1)
 						{
 							/*
@@ -321,7 +333,10 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	pub_status_->publish(status);
-	if((area_status > 0 ) && detect_val==0 )
+	if(
+			((area_status > 0 ) && detect_val==0) ||
+			( area_status==0 && coop_flag)
+	  )
 	{	
 		if(coop_flag )
 		{
@@ -336,21 +351,41 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	{
 		area_status_val=2;
 	}
+	printf("route_angle=%lf\n",route_angle*180/M_PI);
 	/*
-	detect_area[detect_arealen/2][detect_arealen/2]=8;
-	printf("\e[1;1H\e[2J");
-	for(int i=0;i<4;i++)
-	{
-		detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=7;
+	   if(log_time > end_time)
+	   {
+	   end_time=log_time+1000;
+	   char test[1000000];
+	   int lp_test=0;
+	   memset(test,0,sizeof(test));
+	   detect_area[detect_arealen/2][detect_arealen/2]=8;
+	   printf("\e[1;1H\e[2J");
+	   for(int i=0;i<4;i++)
+	   {
+	   detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
+	   }
+	   for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	   {
+	   for(lp_x=0;lp_x < detect_arealen;lp_x++)
+	   {
+	//printf(" %d ",detect_area[lp_x][lp_y]);
+	test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
+	lp_test++;
+	test[lp_test]=' ';
+	lp_test++;
+	test[lp_test]=' ';
+	lp_test++;
+
 	}
-	for(lp_y=0;lp_y < detect_arealen;lp_y++)
-	{
-		for(lp_x=0;lp_x < detect_arealen;lp_x++)
-		{
-			printf(" %d ",detect_area[lp_x][lp_y]);
-		}
-		printf("\n");
+	//printf("\n");
+	test[lp_test]='\n';
+	lp_test++;
 	}
+	printf("%d\n",lp_test);
+	printf("%s\n",test);
+	printf("route_angle=%lf\n",route_angle);
 	printf("\n\n\n");
+	}
 	*/
 }
