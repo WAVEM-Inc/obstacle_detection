@@ -2,7 +2,7 @@
 #define OBS_DETECTION_LISTENER_HPP__
 
 #define DETECT_SIZE 25
-#define DETECT_RES 20
+#define DETECT_RES 4
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
 #define OBS_MOVE_DIST 4

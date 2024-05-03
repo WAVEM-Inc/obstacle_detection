@@ -55,18 +55,26 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 		//printf("detection_range SIZE=%ld,%f,%f\n\n", drive->end_node.detection_range.size(),drive->end_node.detection_range[0].offset,drive->end_node.detection_range[2].offset);
 		if(drive->end_node.kind.compare(std::string("waiting"))==0)
 		{
-			if(drive->end_node.detection_range[0].action_code.compare(std::string("cooperative"))==0)
+
+			if(drive->end_node.detection_range.size() > 0 )
 			{
-				coop_pub_flag=true;
-				coop.data = "START";
-				pub_coop_->publish(coop);
+				if(drive->end_node.detection_range[0].action_code.compare(std::string("cooperative"))==0)
+				{
+					coop_pub_flag=true;
+					coop.data = "START";
+					pub_coop_->publish(coop);
+				}
+				else
+				{
+					area_status=1;
+					area_status_val=1;
+				}
 			}
 			else
 			{
 				area_status=1;
 				area_status_val=1;
 			}
-			node_lat=drive->end_node.position.latitude;
 			node_long=drive->end_node.position.longitude;
 			for(lp =0;lp< drive->end_node.detection_range.size() ;lp++)
 			{
@@ -110,6 +118,7 @@ void ObsDetection::gps_callback(const std::shared_ptr<GpsMSG> gps)
 {
 	robot_lat=gps->latitude;
 	robot_long=gps->longitude;
+	printf("JJJJ %lf,%lf\n", robot_lat,robot_long);
 }
 
 bool ObsDetection::area_check(double point_x, double point_y, double *check_area)
@@ -156,7 +165,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		case 1:
 		case 2:
 			robot_angle=qua_.getterYaw();
-			global_angle=0;
+			global_angle=(-90)*M_PI/180;
 			//global_angle=(0)*M_PI/180;
 			gps_distance = calc.getDistance(robot_lat, robot_long, node_lat, node_long,KTM);
 			if((node_lat - robot_lat) > 0)
@@ -178,6 +187,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			area_start_x=-node_x+(node_offset[0]+2.4)*cos(route_angle);
 			area_start_y=-node_y+(node_offset[0]+2.4)*sin(route_angle);
 
+			printf("HHHH,%lf,%lf,%lf,%lf\n",area_start_x,area_start_y,node_x,node_y);
 			area_x1=area_start_x+area_width_l[0]*cos(route_angle+90*M_PI/180);
 			area_y1=area_start_y+area_width_l[0]*sin(route_angle+90*M_PI/180);
 			area_x2=area_x1+area_height[0]*cos(route_angle);
@@ -186,6 +196,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			area_y3=area_start_y+area_width_r[0]*sin(route_angle-90*M_PI/180);
 			area_x4=area_x3+area_height[0]*cos(route_angle);
 			area_y4=area_y3+area_height[0]*sin(route_angle);
+			printf("GGGGGGGGGGGGG%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf\n",area_x1,area_x2,area_x3,area_x4,area_y1,area_y2,area_y3,area_y4);
 			obs_area[0] =area_x1;
 			obs_area[1] =area_y1;
 			obs_area[2] =area_x2;
@@ -210,7 +221,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			else
 			{
 				area_y1=0.8;
-				area_y2=OBS_MOVE_DIST;
+				area_y2=OBS_MOVE_DIST -2.0;
 				car_offset=0.8;
 			}
 			obs_area[0] =area_x1;
@@ -357,29 +368,30 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		area_status=0;
 		area_status_val=0;
 	}
-	/*
-	if(fabs(log_time - end_time) > 20000)
+	/**/
+	if(fabs(log_time - end_time) > 20)
 	{
-		end_time=log_time+20000;
+		end_time=log_time+20;
 		char test[1000000];
 		int lp_test=0;
 		memset(test,0,sizeof(test));
 		detect_area[detect_arealen/2][detect_arealen/2]=8;
-		//printf("\e[1;1H\e[2J");
-		printf("\e[1;1H");
+		printf("\e[1;1H\e[2J");
+		//printf("\e[1;1H");
 		for(int i=0;i<4;i++)
 		{
-			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
+			printf("obs.x=%lf,obs.y=%lf\n",obs_area[i*2],obs_area[i*2+1]);
+//			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=1;
 		}
 		for(lp_y=0;lp_y < detect_arealen;lp_y++)
 		{
 			for(lp_x=0;lp_x < detect_arealen;lp_x++)
 			{
 				//printf("\e[1;1H\e[2J");
-			//	   if(detect_area[lp_x][lp_y]>0)
-			//	   {
-			//	   printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
-			//	   }
+				//	   if(detect_area[lp_x][lp_y]>0)
+				//	   {
+				//	   printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
+				//	   }
 
 				test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
 				lp_test++;
@@ -397,5 +409,5 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		printf("route_angle=%lf\n",route_angle);
 		printf("\n\n\n");
 	}
-	*/
+	/**/
 }

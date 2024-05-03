@@ -4,8 +4,8 @@ speaker: 0
 start_node:
   node_id: '201'
   position:
-    latitude: 37.3061467
-    longitude: 127.2401776
+    latitude: 37.30601717834749
+    longitude: 127.2401849537135
   type: ''
   kind: 'connecting'
   heading: 148.0
@@ -15,12 +15,12 @@ start_node:
 end_node:
   node_id: '202'
   position:
-    latitude: 37.3061114
-    longitude: 127.2401561
+    latitude: 37.3060259
+    longitude: 127.240167
   type: ''
   kind: 'waiting'
   heading: 148.0
   direction: ''
   driving_option: ''
-  detection_range: [{offset: 2.0, width_left: 5.0, width_right: 1.0, height: 6.0, action_code: driving}]" 
+  detection_range: [{offset: 2.0, width_left: 100.0, width_right: 100.0, height: 100.0, action_code: driving}]" 
 
