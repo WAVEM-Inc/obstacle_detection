@@ -72,7 +72,7 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 				area_status=1;
 				area_status_val=1;
 			}
-			node_lat=drive->end_node.position.latiitude;
+			node_lat=drive->end_node.position.latitude;
 			node_long=drive->end_node.position.longitude;
 			for(lp =0;lp< drive->end_node.detection_range.size() ;lp++)
 			{
@@ -235,7 +235,6 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 
 	int detect_arealen = (double)DETECT_SIZE*(double)DETECT_RES*2;
 	int detect_area[detect_arealen][detect_arealen]={0,};
-	memset(detect_area,0,sizeof(detect_area));
 	double occ_x,occ_y;
 	for(lp=1;lp<num_ranges;lp++)
 	{
