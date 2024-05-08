@@ -22,5 +22,5 @@ end_node:
   heading: 148.0
   direction: ''
   driving_option: ''
-  detection_range: [{offset: 2.0, width_left: 100.0, width_right: 100.0, height: 100.0, action_code: driving}]" 
+  detection_range: [{offset: 2.0, width_left: 2.0, width_right: 2.0, height: 4.0, action_code: driving}]" 
 
