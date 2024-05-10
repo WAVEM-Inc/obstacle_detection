@@ -2,10 +2,10 @@
 #define OBS_DETECTION_LISTENER_HPP__
 
 #define DETECT_SIZE 25
-#define DETECT_RES 4
+#define DETECT_RES 8
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
-#define OBS_MOVE_DIST 1.5
+#define OBS_MOVE_DIST 1.0
 #define FRONT_CAR_OFFSET 2.7
 #define REAR_CAR_OFFSET 0.8
 #define GPS_OFFSET 2.4

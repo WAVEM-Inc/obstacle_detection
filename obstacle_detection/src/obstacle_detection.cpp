@@ -99,6 +99,11 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 				tm_x=-gps_distance.distance_x;
 			}
 			route_angle=atan2(tm_y,tm_x);
+			if(drive->start_node.direction.compare(std::string("backward"))==0)
+			{
+				route_angle=-route_angle;
+			}
+			
 		}
 	}
 }
@@ -357,7 +362,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		//printf("\e[1;1H");
 		for(int i=0;i<4;i++)
 		{
-			//			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=1;
+			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
 		}
 		for(lp_y=0;lp_y < detect_arealen;lp_y++)
 		{
