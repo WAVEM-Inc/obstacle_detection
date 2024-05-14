@@ -99,11 +99,10 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 				tm_x=-gps_distance.distance_x;
 			}
 			route_angle=atan2(tm_y,tm_x);
-			if(drive->start_node.direction.compare(std::string("backward"))==0)
+			if((drive->start_node.direction.compare(std::string("backward"))==0) && !(drive->end_node.direction.compare(std::string("backward"))==0) )
 			{
 				route_angle=-route_angle;
 			}
-			
 		}
 	}
 }
