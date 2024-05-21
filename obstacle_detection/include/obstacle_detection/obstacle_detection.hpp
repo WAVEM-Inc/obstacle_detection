@@ -1,12 +1,16 @@
 #ifndef OBS_DETECTION_LISTENER_HPP__
 #define OBS_DETECTION_LISTENER_HPP__
 
-#define DETECT_SIZE 40
-#define DETECT_RES 10
+#define DETECT_SIZE 25
+#define DETECT_RES 8
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
-#define OBS_MOVE_DIST 5.5
-#define CAR_OFFSET 2.7
+#define OBS_MOVE_DIST 1.0
+#define FRONT_CAR_OFFSET 2.7
+#define REAR_CAR_OFFSET 0.8
+#define GPS_OFFSET 2.4
+
+#define GLOBAL_ANGLE -90
 
 #include <iostream>
 #include <fstream>
@@ -48,6 +52,7 @@ class ObsDetection : public rclcpp::Node{
 		rclcpp::Subscription<DriveMSG>::SharedPtr sub_drive_;
 		rclcpp::Subscription<DetectMSG>::SharedPtr sub_detect_;
 		Quaternion qua_;
+		clock_t log_time, end_time;
 		void scan_callback(const std::shared_ptr<LidarMSG> scan);
 		void gps_callback(const std::shared_ptr<GpsMSG> gps);
 		void odom_callback(const std::shared_ptr<OdomMSG> odom);
