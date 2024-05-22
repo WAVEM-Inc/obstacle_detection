@@ -6,8 +6,8 @@
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
 #define OBS_MOVE_DIST 1.0
-#define FRONT_CAR_OFFSET 2.7
-#define REAR_CAR_OFFSET 0.8
+#define FRONT_CAR_OFFSET 2.8
+#define REAR_CAR_OFFSET 0.9
 #define GPS_OFFSET 2.4
 
 #define GLOBAL_ANGLE -90
