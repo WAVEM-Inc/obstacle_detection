@@ -2,11 +2,11 @@
 #define OBS_DETECTION_LISTENER_HPP__
 
 #define DETECT_SIZE 25
-#define DETECT_RES 8
+#define DETECT_RES 20
 #define CAR_WIDTH 1.4
 #define SCAN_FILTER_DIST 0.2
 #define OBS_MOVE_DIST 1.0
-#define FRONT_CAR_OFFSET 2.8
+#define FRONT_CAR_OFFSET 2.7
 #define REAR_CAR_OFFSET 0.9
 #define GPS_OFFSET 2.4
 
@@ -51,11 +51,13 @@ class ObsDetection : public rclcpp::Node{
 		rclcpp::Subscription<LidarMSG>::SharedPtr sub_scan_;
 		rclcpp::Subscription<DriveMSG>::SharedPtr sub_drive_;
 		rclcpp::Subscription<DetectMSG>::SharedPtr sub_detect_;
+		rclcpp::Subscription<StringMSG>::SharedPtr sub_coop_;
 		Quaternion qua_;
 		clock_t log_time, end_time;
 		void scan_callback(const std::shared_ptr<LidarMSG> scan);
 		void gps_callback(const std::shared_ptr<GpsMSG> gps);
 		void odom_callback(const std::shared_ptr<OdomMSG> odom);
+		void coop_callback(const std::shared_ptr<StringMSG> data);
 
 		void drive_callback(const std::shared_ptr<DriveMSG> drive);
 		void detect_callback(const std::shared_ptr<DetectMSG> detect);
@@ -80,6 +82,7 @@ class ObsDetection : public rclcpp::Node{
 		double coop_detect_axis[512];
 		bool coop_flag=false;
 		bool coop_pub_flag=false;
+		bool coop_sig_flag=true;
 		std::string coop_detect_id[256];
 
 		//gps callback

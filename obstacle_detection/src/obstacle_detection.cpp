@@ -7,6 +7,7 @@ ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 
 	sub_drive_ = this->create_subscription<DriveMSG>("/drive/info", 1, std::bind(&ObsDetection::drive_callback ,this ,std::placeholders::_1));
 	sub_detect_ = this->create_subscription<DetectMSG>("/drive/object_detect", 1, std::bind(&ObsDetection::detect_callback ,this ,std::placeholders::_1));
+	sub_coop_ = this->create_subscription<StringMSG>("/drive/obstacle/coop_flag", 1, std::bind(&ObsDetection::coop_callback ,this ,std::placeholders::_1));
 	cb_group_status_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 	rclcpp::PublisherOptions pub_status_options;
 	pub_status_options.callback_group = cb_group_status_;
@@ -19,6 +20,17 @@ ObsDetection::ObsDetection():Node("obstacle_detection_node"){
 	log_time=end_time;
 }
 
+void ObsDetection::coop_callback(const std::shared_ptr<StringMSG> data)
+{
+	if(data->data.compare(std::string("START")) ==0 )
+	{
+		coop_sig_flag=true;
+	}
+	else if(data->data.compare(std::string("STOP")) ==0 )
+	{
+		coop_sig_flag=false;
+	}
+}
 void ObsDetection::detect_callback(const std::shared_ptr<DetectMSG> detect)
 {
 	memset(coop_detect_axis,0,sizeof(coop_detect_axis));
@@ -55,7 +67,7 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 
 			if(drive->end_node.detection_range.size() > 0 )
 			{
-				if(drive->end_node.detection_range[0].action_code.compare(std::string("cooperative"))==0)
+				if((drive->end_node.detection_range[0].action_code.compare(std::string("cooperative"))==0) && (coop_sig_flag) )
 				{
 					coop_pub_flag=true;
 					coop.data = "START";
@@ -210,17 +222,24 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			global_angle=0;
 			area_x1=-(CAR_WIDTH/2);
 			area_x2=CAR_WIDTH/2;
-			if(odom_vel_x >= 0)
+			if(odom_vel_x >= 0.05)
 			{
 				car_offset=FRONT_CAR_OFFSET;
 				area_y1=-(OBS_MOVE_DIST+FRONT_CAR_OFFSET);
-				area_y2=-car_offset;
+				area_y2=-(car_offset+0.2);
+			}
+			else if(odom_vel_x < -0.05)
+			{
+				car_offset=REAR_CAR_OFFSET;
+				area_y1=car_offset+0.2;
+				area_y2=OBS_MOVE_DIST + REAR_CAR_OFFSET;
 			}
 			else
 			{
-				car_offset=REAR_CAR_OFFSET;
-				area_y1=car_offset;
-				area_y2=OBS_MOVE_DIST + REAR_CAR_OFFSET;
+				area_x1=0;
+				area_y1=0;
+				area_x2=0;
+				area_y2=0;
 			}
 			obs_area[0] =area_x1;
 			obs_area[1] =-area_y1;
