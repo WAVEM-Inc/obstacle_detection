@@ -222,7 +222,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			global_angle=0;
 			area_x1=-(CAR_WIDTH/2);
 			area_x2=CAR_WIDTH/2;
-			if(odom_vel_x >= 0.05)
+			if(odom_vel_x >= 0)
 			{
 				car_offset=FRONT_CAR_OFFSET;
 				area_y1=-(OBS_MOVE_DIST+FRONT_CAR_OFFSET);
@@ -303,9 +303,10 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	}
 	if(!detect_val)
 	{
-		for(lp_y=0;lp_y < detect_arealen;lp_y++)
+		for(lp_x=0;lp_x < detect_arealen;lp_x++)
 		{
-			for(lp_x=0;lp_x < detect_arealen;lp_x++)
+			int detect_flag = 0;
+			for(lp_y=0;lp_y < detect_arealen;lp_y++)
 			{
 				if(detect_area[lp_x][lp_y] > 0)
 				{
@@ -320,7 +321,18 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							area_status_val=0;
 						}
 						detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
-						detect_val=true;
+						if(area_status == 0 && detect_flag > 4)
+						{
+							detect_val=true;
+						}
+						else if(area_status == 0)
+						{
+							detect_flag++;
+						}
+						else
+						{
+							detect_val=true;
+						}
 						if(area_status >= 1)
 						{
 							/*
