@@ -78,6 +78,7 @@ class ObsDetection : public rclcpp::Node{
 		double  global_angle=0;
 		double coop_detect_num=0;
 		double coop_detect_axis[512];
+		bool cali_flag=false;
 		bool coop_flag=false;
 		bool coop_pub_flag=false;
 		std::string coop_detect_id[256];
