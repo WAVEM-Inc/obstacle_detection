@@ -321,7 +321,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							area_status_val=0;
 						}
 						detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
-						if(area_status == 0 && detect_flag > 4)
+						if(area_status == 0 && detect_flag >= 2)
 						{
 							detect_val=true;
 						}
