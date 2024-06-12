@@ -62,6 +62,13 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 		memset(area_width_r,0,sizeof(area_width_r));
 		memset(area_height,0,sizeof(area_height));
 		//printf("detection_range SIZE=%ld,%f,%f\n\n", drive->end_node.detection_range.size(),drive->end_node.detection_range[0].offset,drive->end_node.detection_range[2].offset);
+		if((drive->code.compare(std::string("arrive"))==0) && (fabs(drive->end_node.heading - (int)drive->end_node.heading) > 0.00001))
+		{
+			if(drive->end_node.kind.compare(std::string("waiting"))==0)
+			{
+				cali_flag=true;
+			}
+		}
 		if(drive->end_node.kind.compare(std::string("waiting"))==0)
 		{
 
@@ -222,24 +229,17 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			global_angle=0;
 			area_x1=-(CAR_WIDTH/2);
 			area_x2=CAR_WIDTH/2;
-			if(odom_vel_x >= 0)
-			{
-				car_offset=FRONT_CAR_OFFSET;
-				area_y1=-(OBS_MOVE_DIST+FRONT_CAR_OFFSET);
-				area_y2=-(car_offset+0.2);
-			}
-			else if(odom_vel_x < -0.05)
+			if(odom_vel_x < -0.05)
 			{
 				car_offset=REAR_CAR_OFFSET;
-				area_y1=car_offset+0.2;
+				area_y1=car_offset;
 				area_y2=OBS_MOVE_DIST + REAR_CAR_OFFSET;
 			}
 			else
 			{
-				area_x1=0;
-				area_y1=0;
-				area_x2=0;
-				area_y2=0;
+				car_offset=FRONT_CAR_OFFSET;
+				area_y1=-(OBS_MOVE_DIST+FRONT_CAR_OFFSET);
+				area_y2=-(car_offset);
 			}
 			obs_area[0] =area_x1;
 			obs_area[1] =-area_y1;
@@ -301,12 +301,16 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			}
 		}	
 	}
+	int detect_flag = 0;
 	if(!detect_val)
 	{
-		for(lp_x=0;lp_x < detect_arealen;lp_x++)
+		for(lp_y=0;lp_y < detect_arealen;lp_y++)
 		{
-			int detect_flag = 0;
-			for(lp_y=0;lp_y < detect_arealen;lp_y++)
+			if(lp_y%5==0)
+			{
+				detect_flag=0;
+			}
+			for(lp_x=0;lp_x < detect_arealen;lp_x++)
 			{
 				if(detect_area[lp_x][lp_y] > 0)
 				{
@@ -321,7 +325,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							area_status_val=0;
 						}
 						detect_area[lp_x][lp_y] = detect_area[lp_x][lp_y]+1;
-						if(area_status == 0 && detect_flag >= 2)
+						if(area_status_val == 0 && detect_flag >= 1)
 						{
 							detect_val=true;
 						}
@@ -331,8 +335,10 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 						}
 						else
 						{
+						
 							detect_val=true;
 						}
+
 						if(area_status >= 1)
 						{
 							/*
@@ -362,6 +368,11 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_status = area_status_val;
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
+	if(cali_flag && area_status_val > 0 && detect_val==0)
+	{
+		sleep(5);
+		cali_flag=false;
+	}
 	pub_status_->publish(status);
 	if( detect_val==0 && coop_flag)
 	{	
@@ -381,44 +392,44 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		area_status_val=0;
 	}
 	/*
-	if(fabs(log_time - end_time) > 20)
+	   if(fabs(log_time - end_time) > 20)
+	   {
+	   end_time=log_time+20;
+	   char test[1000000];
+	   int lp_test=0;
+	   memset(test,0,sizeof(test));
+	   detect_area[detect_arealen/2][detect_arealen/2]=8;
+	   printf("\e[1;1H\e[2J");
+	//printf("\e[1;1H");
+	for(int i=0;i<4;i++)
 	{
-		end_time=log_time+20;
-		char test[1000000];
-		int lp_test=0;
-		memset(test,0,sizeof(test));
-		detect_area[detect_arealen/2][detect_arealen/2]=8;
-		printf("\e[1;1H\e[2J");
-		//printf("\e[1;1H");
-		for(int i=0;i<4;i++)
-		{
-			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
-		}
-		for(lp_y=0;lp_y < detect_arealen;lp_y++)
-		{
-			for(lp_x=0;lp_x < detect_arealen;lp_x++)
-			{
-				//printf("\e[1;1H\e[2J");
-				//	   if(detect_area[lp_x][lp_y]>0)
-				//	   {
-				//	   printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
-				//	   }
+	detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
+	}
+	for(lp_y=0;lp_y < detect_arealen;lp_y++)
+	{
+	for(lp_x=0;lp_x < detect_arealen;lp_x++)
+	{
+	//printf("\e[1;1H\e[2J");
+	//	   if(detect_area[lp_x][lp_y]>0)
+	//	   {
+	//	   printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
+	//	   }
 
-				test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
-				lp_test++;
-				test[lp_test]=' ';
-				lp_test++;
-				test[lp_test]=' ';
-				lp_test++;
-			}
-			//printf("\n");
-			test[lp_test]='\n';
-			lp_test++;
-		}
-		printf("%d\n",lp_test);
-		printf("%s\n",test);
-		printf("route_angle=%lf\n",route_angle);
-		printf("\n\n\n");
+	test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
+	lp_test++;
+	test[lp_test]=' ';
+	lp_test++;
+	test[lp_test]=' ';
+	lp_test++;
+	}
+	//printf("\n");
+	test[lp_test]='\n';
+	lp_test++;
+	}
+	printf("%d\n",lp_test);
+	printf("%s\n",test);
+	printf("route_angle=%lf\n",route_angle);
+	printf("\n\n\n");
 	}
 	*/
 }

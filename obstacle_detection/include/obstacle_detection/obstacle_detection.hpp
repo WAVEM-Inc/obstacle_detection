@@ -2,11 +2,11 @@
 #define OBS_DETECTION_LISTENER_HPP__
 
 #define DETECT_SIZE 25
-#define DETECT_RES 10
+#define DETECT_RES 25
 #define CAR_WIDTH 1.4
-#define SCAN_FILTER_DIST 0.2
+#define SCAN_FILTER_DIST 0.5
 #define OBS_MOVE_DIST 1.0
-#define FRONT_CAR_OFFSET 2.7
+#define FRONT_CAR_OFFSET 2.8
 #define REAR_CAR_OFFSET 0.9
 #define GPS_OFFSET 2.4
 
@@ -80,6 +80,7 @@ class ObsDetection : public rclcpp::Node{
 		double  global_angle=0;
 		double coop_detect_num=0;
 		double coop_detect_axis[512];
+		bool cali_flag=false;
 		bool coop_flag=false;
 		bool coop_pub_flag=false;
 		bool coop_sig_flag=true;
