@@ -129,6 +129,14 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 void ObsDetection::odom_callback(const std::shared_ptr<OdomMSG> odom)
 {
 	odom_vel_x=odom->twist.twist.linear.x;
+	if(odom_vel_x > 0.1)
+	{
+		vel_flag=true;
+	}
+	else if(odom_vel_x < -0.1)
+	{
+		vel_flag=false;
+	}
 	qua_.setterX(odom->pose.pose.orientation.x);
 	qua_.setterY(odom->pose.pose.orientation.y);
 	qua_.setterZ(odom->pose.pose.orientation.z);
@@ -174,12 +182,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	////tmp value
 	//
 	double node_x, node_y,area_start_x, area_start_y, coop_x,coop_y;
-	/*
-	   if(fabs(odom_vel_x) >= 0.1)
-	   {
-	   area_status=0;
-	   }
-	   */
+
 	switch(area_status)
 	{
 		case 1:
@@ -229,7 +232,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			global_angle=0;
 			area_x1=-(CAR_WIDTH/2);
 			area_x2=CAR_WIDTH/2;
-			if(odom_vel_x < -0.05)
+			if(!vel_flag)
 			{
 				car_offset=REAR_CAR_OFFSET;
 				area_y1=car_offset;
@@ -328,14 +331,14 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 						if(area_status_val == 0 && detect_flag >= 1)
 						{
 							detect_val=true;
+							cont_flag=30;
 						}
-						else if(area_status == 0)
+						else if(area_status_val == 0)
 						{
 							detect_flag++;
 						}
 						else
 						{
-						
 							detect_val=true;
 						}
 
@@ -354,11 +357,18 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							if(obs_dist >  fabs((double)(detect_arealen/2-lp_y)/DETECT_RES-car_offset))
 							{
 								obs_dist = fabs((double)(detect_arealen/2-lp_y)/DETECT_RES)-car_offset;
+								obs_dist_bak = obs_dist;
 							}
 						}
 					}
 				}
 			}
+		}
+		if(cont_flag>0)
+		{
+			detect_val=true;
+			obs_dist = obs_dist_bak;
+			cont_flag--;
 		}
 	}
 	if(!detect_val)
