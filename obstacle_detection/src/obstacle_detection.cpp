@@ -179,6 +179,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	memset(obs_area,0,sizeof(obs_area));
 	StatusMSG status;
 	StringMSG coop;
+	status.obstacle_id = "lidar obstacle:" ;
 	////tmp value
 	//
 	double node_x, node_y,area_start_x, area_start_y, coop_x,coop_y;
@@ -259,6 +260,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	int detect_arealen = (double)DETECT_SIZE*(double)DETECT_RES*2;
 	int detect_area[detect_arealen][detect_arealen]={0,};
 	double occ_x,occ_y;
+	int lidar_obs_num=1;
 	for(lp=1;lp<num_ranges;lp++)
 	{
 		if((!std::isnan(scan->ranges[lp])) && (scan->ranges[lp] > 0.019 && ((scan->ranges[lp]-scan->ranges[lp-1]) < SCAN_FILTER_DIST )))
@@ -350,7 +352,11 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							   obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
 							   }
 							   */
+							double lidar_obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
 							obs_dist = 0;
+							//status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(double((detect_arealen/2-lp_x))/DETECT_RES) +  ",y=" +  std::to_string(double((detect_arealen/2-lp_y))/DETECT_RES)+")" ;
+							status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(lidar_obs_dist*sin(-route_angle)) +  ",y=" +  std::to_string(lidar_obs_dist*cos(-route_angle))+")" ;
+							lidar_obs_num++;
 						}
 						else
 						{
@@ -370,6 +376,11 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			obs_dist = obs_dist_bak;
 			cont_flag--;
 		}
+	}
+	if(area_status_val>0)
+	{
+		RCLCPP_INFO(this->get_logger(),"node_lat=%lf, node_long=%lf,node_offset=%lf,area_width_l=%lf, area_width_r=%lf, area_height=%lf ,car_lat=%lf, car_long=%lf, area_obstacle id: %s",node_lat,node_long,node_offset[0],area_width_l[0],area_width_r[0],area_height[0],robot_lat,robot_long, status.obstacle_id.c_str() );
+			
 	}
 	if(!detect_val)
 	{
