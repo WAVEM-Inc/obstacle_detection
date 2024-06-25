@@ -355,7 +355,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							double lidar_obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
 							obs_dist = 0;
 							//status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(double((detect_arealen/2-lp_x))/DETECT_RES) +  ",y=" +  std::to_string(double((detect_arealen/2-lp_y))/DETECT_RES)+")" ;
-							status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(lidar_obs_dist*sin(-route_angle)) +  ",y=" +  std::to_string(lidar_obs_dist*cos(-route_angle))+")" ;
+							status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(lidar_obs_dist*sin(-route_angle-global_angle)) +  ",y=" +  std::to_string(lidar_obs_dist*cos(-route_angle-global_angle))+")" ;
 							lidar_obs_num++;
 						}
 						else
