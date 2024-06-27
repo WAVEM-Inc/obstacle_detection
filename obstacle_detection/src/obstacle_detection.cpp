@@ -273,6 +273,17 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			}
 		}
 	}
+
+	status.obstacle_id = status.obstacle_id + 
+		" area_1=(" + std::to_string(obs_area[0]*cos(-route_angle-global_angle) - obs_area[1]*sin(-route_angle-global_angle)) + 
+		", " + std::to_string(obs_area[0]*sin(-route_angle-global_angle) + obs_area[1]*cos(-route_angle-global_angle)) +  
+		") area_2=(" + std::to_string(obs_area[2]*cos(-route_angle-global_angle) - obs_area[3]*sin(-route_angle-global_angle)) +  
+		",=" + std::to_string(obs_area[2]*sin(-route_angle-global_angle) + obs_area[3]*cos(-route_angle-global_angle)) +  
+		") area_3=" + std::to_string(obs_area[4]*cos(-route_angle-global_angle) - obs_area[5]*sin(-route_angle-global_angle)) +  
+		"," + std::to_string(obs_area[4]*sin(-route_angle-global_angle) + obs_area[5]*cos(-route_angle-global_angle)) +  
+		") area_4=" + std::to_string(obs_area[6]*cos(-route_angle-global_angle) - obs_area[7]*sin(-route_angle-global_angle)) +  
+		", " + std::to_string(obs_area[6]*sin(-route_angle-global_angle) + obs_area[7]*cos(-route_angle-global_angle)) +  
+		")" ;
 	detect_val=0;
 	obs_dist=DETECT_SIZE;
 
@@ -354,9 +365,9 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 							   */
 							double lidar_obs_dist = sqrt(pow(detect_arealen/2-lp_x,2) + pow(detect_arealen/2-lp_y,2))/DETECT_RES;
 							obs_dist = 0;
-							status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + 
-								": x=" + std::to_string(double((detect_arealen/2-lp_x))/DETECT_RES*cos(-route_angle-global_angle) - double((detect_arealen/2-lp_y))/DETECT_RES*sin(-route_angle-global_angle)) +  
-								", y=" + std::to_string(double((detect_arealen/2-lp_x))/DETECT_RES*cos(-route_angle-global_angle) + double((detect_arealen/2-lp_y))/DETECT_RES*sin(-route_angle-global_angle)) +  
+							status.obstacle_id = status.obstacle_id + " ( obs_" + std::to_string(lidar_obs_num) + 
+								": " + std::to_string(double((lp_x-detect_arealen/2))/DETECT_RES*cos(-route_angle-global_angle) - double((detect_arealen/2-lp_y))/DETECT_RES*sin(-route_angle-global_angle)) +  
+								", " + std::to_string(double((lp_x-detect_arealen/2))/DETECT_RES*sin(-route_angle-global_angle) + double((detect_arealen/2-lp_y))/DETECT_RES*cos(-route_angle-global_angle)) +  
 								")" ;
 							//status.obstacle_id = status.obstacle_id + " ( " + std::to_string(lidar_obs_num) + ": x=" + std::to_string(lidar_obs_dist*sin(-route_angle-global_angle)) +  ",y=" +  std::to_string(lidar_obs_dist*cos(-route_angle-global_angle))+")" ;
 							lidar_obs_num++;
@@ -373,7 +384,11 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 				}
 			}
 		}
-		if(cont_flag>0)
+		if(area_status_val > 0)
+		{
+			cont_flag =0;
+		}
+		else if(cont_flag>0)
 		{
 			detect_val=true;
 			obs_dist = obs_dist_bak;
@@ -383,7 +398,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	if(area_status_val>0)
 	{
 		RCLCPP_INFO(this->get_logger(),"node_lat=%lf, node_long=%lf,node_offset=%lf,area_width_l=%lf, area_width_r=%lf, area_height=%lf ,car_lat=%lf, car_long=%lf, area_obstacle id: %s",node_lat,node_long,node_offset[0],area_width_l[0],area_width_r[0],area_height[0],robot_lat,robot_long, status.obstacle_id.c_str() );
-			
+
 	}
 	if(!detect_val)
 	{
@@ -393,12 +408,12 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	status.obstacle_value = detect_val;
 	status.obstacle_distance = obs_dist;
 	/*
-	if(cali_flag && area_status_val > 0 && detect_val==0)
-	{
-		sleep(5);
-		cali_flag=false;
-	}
-	*/
+	   if(cali_flag && area_status_val > 0 && detect_val==0)
+	   {
+	   sleep(5);
+	   cali_flag=false;
+	   }
+	   */
 	pub_status_->publish(status);
 	if( detect_val==0 && coop_flag)
 	{	
