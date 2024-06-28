@@ -117,11 +117,14 @@ void ObsDetection::drive_callback(const std::shared_ptr<DriveMSG> drive)
 			{
 				tm_x=-gps_distance.distance_x;
 			}
-			route_angle=atan2(tm_y,tm_x);
+			//route_angle=atan2(tm_y,tm_x);
+			route_angle=(drive->end_node.heading+90)*M_PI/180;
+			/*
 			if((drive->start_node.direction.compare(std::string("backward"))==0) && !(drive->end_node.direction.compare(std::string("backward"))==0) )
 			{
-				route_angle=-route_angle;
+				route_angle= route_angle + M_PI;
 			}
+			*/
 		}
 	}
 }
@@ -207,6 +210,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 			{
 				node_x=-gps_distance.distance_x;
 			}
+
 			area_start_x=-node_x+(node_offset[0]+GPS_OFFSET)*cos(route_angle);
 			area_start_y=-node_y+(node_offset[0]+GPS_OFFSET)*sin(route_angle);
 
@@ -265,8 +269,8 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	{
 		if((!std::isnan(scan->ranges[lp])) && (scan->ranges[lp] > 0.019 && ((scan->ranges[lp]-scan->ranges[lp-1]) < SCAN_FILTER_DIST )))
 		{
-			occ_x=-scan->ranges[lp]*sin( double(scan->angle_min+scan->angle_increment*lp)-robot_angle+global_angle );
-			occ_y=-scan->ranges[lp]*cos( double(scan->angle_min+scan->angle_increment*lp)-robot_angle+global_angle );
+			occ_x=-scan->ranges[lp]*sin( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
+			occ_y=-scan->ranges[lp]*cos( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
 			if((fabs(occ_x) < DETECT_SIZE) && (fabs(occ_y) < DETECT_SIZE))
 			{
 				detect_area[(int)((DETECT_SIZE+occ_x)*DETECT_RES)][(int)((DETECT_SIZE+occ_y)*DETECT_RES)]=1;
@@ -397,7 +401,7 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	}
 	if(area_status_val>0)
 	{
-		RCLCPP_INFO(this->get_logger(),"node_lat=%lf, node_long=%lf,node_offset=%lf,area_width_l=%lf, area_width_r=%lf, area_height=%lf ,car_lat=%lf, car_long=%lf, area_obstacle id: %s",node_lat,node_long,node_offset[0],area_width_l[0],area_width_r[0],area_height[0],robot_lat,robot_long, status.obstacle_id.c_str() );
+//		RCLCPP_INFO(this->get_logger(),"node_lat=%lf, node_long=%lf,node_offset=%lf,area_width_l=%lf, area_width_r=%lf, area_height=%lf ,car_lat=%lf, car_long=%lf, area_obstacle id: %s",node_lat,node_long,node_offset[0],area_width_l[0],area_width_r[0],area_height[0],robot_lat,robot_long, status.obstacle_id.c_str() );
 
 	}
 	if(!detect_val)
@@ -433,44 +437,44 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 		area_status_val=0;
 	}
 	/*
-	   if(fabs(log_time - end_time) > 20)
-	   {
-	   end_time=log_time+20;
-	   char test[1000000];
-	   int lp_test=0;
-	   memset(test,0,sizeof(test));
-	   detect_area[detect_arealen/2][detect_arealen/2]=8;
-	   printf("\e[1;1H\e[2J");
-	//printf("\e[1;1H");
-	for(int i=0;i<4;i++)
+	if(fabs(log_time - end_time) > 50000)
 	{
-	detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=2;
-	}
-	for(lp_y=0;lp_y < detect_arealen;lp_y++)
-	{
-	for(lp_x=0;lp_x < detect_arealen;lp_x++)
-	{
-	//printf("\e[1;1H\e[2J");
-	//	   if(detect_area[lp_x][lp_y]>0)
-	//	   {
-	//	   printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
-	//	   }
+		end_time=log_time+50000;
+		char test[1000000];
+		int lp_test=0;
+		memset(test,0,sizeof(test));
+		detect_area[detect_arealen/2][detect_arealen/2]=8;
+		printf("\e[1;1H\e[2J");
+		//printf("\e[1;1H");
+		for(int i=0;i<4;i++)
+		{
+			detect_area[(int)((DETECT_SIZE+obs_area[i*2])*DETECT_RES)][(int)(-(DETECT_SIZE+obs_area[i*2+1])*DETECT_RES)]=4;
+		}
+		for(lp_y=0;lp_y < detect_arealen;lp_y++)
+		{
+			for(lp_x=0;lp_x < detect_arealen;lp_x++)
+			{
+				printf("\e[1;1H\e[2J");
+				if(detect_area[lp_x][lp_y]>0)
+				{
+					printf("\e[%d,%d]%d",lp_x,lp_y,detect_area[lp_x][lp_y]);
+				}
 
-	test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
-	lp_test++;
-	test[lp_test]=' ';
-	lp_test++;
-	test[lp_test]=' ';
-	lp_test++;
-	}
-	//printf("\n");
-	test[lp_test]='\n';
-	lp_test++;
-	}
-	printf("%d\n",lp_test);
-	printf("%s\n",test);
-	printf("route_angle=%lf\n",route_angle);
-	printf("\n\n\n");
+				test[lp_test]=(char)(detect_area[lp_x][lp_y]+48);
+				lp_test++;
+				test[lp_test]=' ';
+				lp_test++;
+				test[lp_test]=' ';
+				lp_test++;
+			}
+			//printf("\n");
+			test[lp_test]='\n';
+			lp_test++;
+		}
+		printf("%d\n",lp_test);
+		printf("%s\n",test);
+		printf("route_angle=%lf\n",route_angle);
+		printf("\n\n\n");
 	}
 	*/
 }

@@ -4,8 +4,8 @@ speaker: 0
 start_node:
   node_id: '201'
   position:
-    latitude: 36.1144324
-    longitude: 128.3691
+    latitude: 37.34234235
+    longitude: 138.435345
   type: 'work_node'
   kind: 'endpoint'
   heading: 148.0
@@ -15,12 +15,12 @@ start_node:
 end_node:
   node_id: '202'
   position:
-    latitude: 36.1145078
-    longitude: 128.3691
+    latitude: $2
+    longitude: $3
   type: ''
   kind: 'waiting'
-  heading: 148.0
-  direction: ''
+  heading: $1
+  direction: 'forward'
   driving_option: ''
-  detection_range: [{offset: 1.0, width_left: 3.0, width_right: 1.0, height: 20.0, action_code: waiting}]" 
+  detection_range: [{offset: $4, width_left: $6, width_right: $7 , height: $5, action_code: waiting}]" 
 
