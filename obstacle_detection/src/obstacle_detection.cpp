@@ -265,8 +265,8 @@ void ObsDetection::scan_callback(const std::shared_ptr<LidarMSG> scan){
 	{
 		if((!std::isnan(scan->ranges[lp])) && (scan->ranges[lp] > 0.019 && ((scan->ranges[lp]-scan->ranges[lp-1]) < SCAN_FILTER_DIST )))
 		{
-			occ_x=-scan->ranges[lp]*sin( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
-			occ_y=-scan->ranges[lp]*cos( double(scan->angle_min+scan->angle_increment*lp)+robot_angle+global_angle );
+			occ_x=-scan->ranges[lp]*sin( double(scan->angle_min+scan->angle_increment*lp)-robot_angle+global_angle );
+			occ_y=-scan->ranges[lp]*cos( double(scan->angle_min+scan->angle_increment*lp)-robot_angle+global_angle );
 			if((fabs(occ_x) < DETECT_SIZE) && (fabs(occ_y) < DETECT_SIZE))
 			{
 				detect_area[(int)((DETECT_SIZE+occ_x)*DETECT_RES)][(int)((DETECT_SIZE+occ_y)*DETECT_RES)]=1;
